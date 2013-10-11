@@ -21,7 +21,12 @@ meta:
   _wpas_skip_757240: '1'
   _wpas_skip_757239: '1'
 ---
-<p>I've been using a headset on my gaming computer for the longest time. The Razor Megalodon. It's a USB Headset from Razor which works pretty well on Windows but unfortunately it does not seem to work out of the box on Linux. For me anyway it's always gave me crackling sound when I try to play any audio.</p><p>Today I finally discovered the fix for this is actually quite simple. The module snd-usb-audio settings need to be tweaked when using the Megalodon. I created a new file in <strong>/etc/modprobe.d/megalodon.conf</strong> and added a line:</p>
+<p>
+  I've been using a headset on my gaming computer for the longest time. The Razor Megalodon. It's a USB Headset from Razor which works pretty well on Windows but unfortunately it does not seem to work out of the box on Linux. For me anyway it's always gave me crackling sound when I try to play any audio.
+</p>
+<p>
+  Today I finally discovered the fix for this is actually quite simple. The module snd-usb-audio settings need to be tweaked when using the Megalodon. I created a new file in <strong>/etc/modprobe.d/megalodon.conf</strong> and added a line:
+</p>
 
 <pre>options snd-usb-audio nrpacks=16</pre>
 
