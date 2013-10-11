@@ -1,15 +1,29 @@
 ---
 title: "Thanh's Blog"
+layout: default
 ---
 
-{% for post in site.posts limit: 10 %}
 <div class="row-fluid">
-  <div class="span12">
-    <h2>{{ post.title }}</h2>
-    <h4>{{ post.date | date_to_long_string }}</h4>
-    <p>
-      <a href="{{ post.url }}">Read Post</a>
-    </p>
+  <div class="col-md-2">
+    <b>Recent Posts</b><br>
+    {% for post in site.posts %}
+    <a href="{{ post.url }}">{{ post.title }}</a><br>
+    {% endfor %}
+  </div>
+
+  <div class="col-xs-12 col-md-10">
+    {% for post in site.posts limit: 10 %}
+    <div class="row-fluid">
+      <div class="col-xs-12 col-md-10">
+        <b><a href="{{ post.url }}">{{ post.title }}</a></b>
+      </div>
+      <div class="col-md-2" align="right">
+        <i>{{ post.date | date_to_long_string }}</i>
+      </div>
+      <div class="col-md-12">
+        <p>{{ post.content }}</p>
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </div>
-{% endfor %}
