@@ -17,11 +17,11 @@ Wanted to post a quick update on some Config Tool UI changes I've been working o
 
 I decided to remove the whole "activate / deactivate" function in the tool. Now instead of needing to activate plugins the tool will just load any plugins it finds which removes the whole step of activating plugins. The below image shows the new plugin screen which removes the checkbox for activating / deactivating plugins. The purpose of this screen now is to simply show you which plugins exist on your system.
 
-<a href="https://zxiiro.files.wordpress.com/2012/05/configtool_recording2.png"><img class="size-full wp-image" src="https://zxiiro.files.wordpress.com/2012/05/configtool_recording2.png?w=487" alt="Image" /></a>
+<a href="/assets/blog/2012-05/configtool_recording2.png"><img class="img-responsive img-thumbnail" src="/assets/blog/2012-05/configtool_recording2.png" width="487" alt="ConfigTool Recording 2" /></a>
 
 We used to have some video options in the "General" tab but that has now been moved to a new tab "Recording" which adds a few new options as shown below.
 
-<a href="https://zxiiro.files.wordpress.com/2012/05/configtool_recording.png"><img class="size-full wp-image" src="https://zxiiro.files.wordpress.com/2012/05/configtool_recording.png?w=487" alt="Image" /></a>
+<a href="/assets/blog/2012-05/configtool_recording.png"><img class="img-responsive img-thumbnail" src="/assets/blog/2012-05/configtool_recording.png" width="487" alt="ConfigTool Recording 1" /></a>
 
 Audio / Video input dropdown boxes will now show all mixer plugins that exist on the system (in the past it only loaded activated plugins). Clicking <strong>Setup</strong> will allow you to configure the specific inputs to use and other video mixer settings.
 
@@ -33,4 +33,4 @@ recordto = IOutput.FILE
 
 &nbsp;
 
-Details on the specific commit can be found at: <a href="https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4">https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4</a>
+Details on the specific commit can be found at: <a href="https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4">https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4</a>
