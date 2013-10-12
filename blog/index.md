@@ -24,6 +24,7 @@ layout: default
         <p>{{ post.content }}</p>
       </div>
     </div>
+    <hr>
     {% endfor %}
   </div>
 </div>
