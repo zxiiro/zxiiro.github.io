@@ -1,5 +1,5 @@
 ---
-title: "Thanh's Blog"
+title: Thanh's Blog
 layout: default
 ---
 
