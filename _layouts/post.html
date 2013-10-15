@@ -3,9 +3,26 @@
 {% include navigation.html %}
 
 <div class="container">
-	<h1>{{ page.title }}</h1>
-	<i>Posted: {{ page.date }}</i>
-	<p>{{ content }}</p>
+  <h1>{{ page.title }}</h1><hr style="margin:0px">
+  <i>Posted on {{ page.date }}</i>
+
+  <p>{{ content }}</p>
+</div>
+
+<!-- next / previous post navigation -->
+<div class="container">
+  <hr>
+  {% if page.previous.url %}
+  <div class="pull-left">
+    <a href="{{ page.previous.url }}" title="previous Post: {{ page.previous.title }}"><i class="icon-arrow-left"></i> {{ page.previous.title }}</a>
+  </div>
+  {% endif %}
+
+  {% if page.next.url %}
+  <div class="pull-right">
+    <a href="{{page.next.url}}" title="next Post: {{page.next.title}}">{{page.next.title}} <i class="icon-arrow-right"></i></a>
+  </div>
+  {% endif %}
 </div>
 
 {% include footer.html %}
