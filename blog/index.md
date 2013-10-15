@@ -5,20 +5,17 @@ title: Thanh's Blog
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-md-9">
+
       {% for post in site.posts limit: 10 %}
-      <div class="row">
-        <div class="col-xs-12 col-md-10">
-          <b><a href="{{ post.url }}">{{ post.title }}</a></b>
-        </div>
-        <div class="col-md-2" align="right">
-          <i>{{ post.date | date_to_long_string }}</i>
-        </div>
-        <div class="col-md-12">
-          {{ post.content }}
-        </div>
+      <div class="container">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3><hr style="margin:0px">
+        <i>Posted on {{ post.date | date_to_long_string }}</i>
+
+        <p>{{ post.content }}</p>
       </div>
       <hr>
       {% endfor %}
+
     </div>
 
     <!-- Side bar start -->
