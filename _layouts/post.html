@@ -7,6 +7,13 @@
   <i>Posted on {{ page.date }}</i>
 
   <p>{{ content }}</p>
+
+  <div class="container">
+    <i class="icon-tags"></i>
+    {% for tag in page.tags %}
+    {{ tag }},
+    {% endfor %}
+  </div>
 </div>
 
 <!-- next / previous post navigation -->
