@@ -54,8 +54,8 @@ Your project should be configured for SDL2 development now. Lets try creating a 
 
 Create a main.cpp file and add the following code.
 
-[code language="cpp"]
-#include &quot;SDL2/SDL.h&quot;
+{% highlight cpp %}
+#include "SDL2/SDL.h";
 
 int main(int argc, char** argv){
 
@@ -64,7 +64,7 @@ int main(int argc, char** argv){
 
     // Create a Window in the middle of the screen
     SDL_Window *window = nullptr;
-	window = SDL_CreateWindow(&quot;Hello World!&quot;,
+	window = SDL_CreateWindow("Hello World!",
 			SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, // x and y
 			640, 480, // Width and Height
 			SDL_WINDOW_SHOWN);
@@ -78,10 +78,9 @@ int main(int argc, char** argv){
 
     return 0;
 }
+{% endhighlight %}
 
-[/code]
-
-You should now be able to build and run this code. 
+You should now be able to build and run this code.
 
 To build press <strong>ctrl+b</strong>.
 To run press <strong>ctrl+f11</strong>.
