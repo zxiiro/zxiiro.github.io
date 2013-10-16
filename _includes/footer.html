@@ -12,7 +12,8 @@
 
     <!-- Custom javascript -->
     <script type="text/javascript">
-    $('ul.nav a[href="'+ window.location.pathname +'"]').parent().addClass('active');
+    var url = window.location.pathname.split('/')[1];
+    $('ul.nav a[href="/'+ url +'"]').parent().addClass('active');
     </script>
   </body>
 </html>
