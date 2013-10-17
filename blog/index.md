@@ -35,8 +35,11 @@ title: Thanh's Blog
             </tr>
             {% endfor %}
           </table>
-
         </div>
+        <!-- end Recent Posts -->
+
+        <div class="panel-footer"><small><b><a href="/blog/archives.html">Archives</a></b></small></div>
+        <!-- end Archives -->
       </div>
 
     </div>
