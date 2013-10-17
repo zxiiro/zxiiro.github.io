@@ -22,7 +22,7 @@ To solve this issue Freeseer comes with a basic reporting tool that will allow t
 
 To access the reporting interface, with freeseer-record open simply click <strong>Help &gt; Report</strong>. The reporting interface will open a basic form for the currently selected talk.
 
-<a href="http://zxiiro.files.wordpress.com/2012/06/report-1.png"><img class="alignnone size-medium wp-image-42" title="Reporting Interface" src="http://zxiiro.files.wordpress.com/2012/06/report-1.png?w=300" alt="Reporting Interface" width="300" height="115" /></a>
+<a href="/assets/blog/2012-06/report-1.png"><img class="img-responsive img-thumbnail" title="Reporting Interface" src="/assets/blog/2012-06/report-1.png" alt="Reporting Interface" width="300" height="115" /></a>
 
 The form has 3 fields which need to be assessed by the reporter.
 <ol>
@@ -36,6 +36,6 @@ The last item is a new feature we added for events where presenters must sign a 
 
 Freeseer also provides a <strong>Report Editor</strong> which will allow the organizer after the event to quickly browse through all the reports and find out which ones have issues.
 
-<a href="http://zxiiro.files.wordpress.com/2012/06/report-2.png"><img class="alignnone size-medium wp-image-43" title="Report Editor" src="http://zxiiro.files.wordpress.com/2012/06/report-2.png?w=300" alt="Report Editor" width="300" height="128" /></a>
+<a href="/assets/blog/2012-06/report-2.png"><img class="img-responsive img-thumbnail" title="Report Editor" src="/assets/blog/2012-06/report-2.png" alt="Report Editor" width="300" height="128" /></a>
 
 &nbsp;
