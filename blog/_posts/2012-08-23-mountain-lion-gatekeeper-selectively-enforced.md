@@ -18,7 +18,7 @@ I recently upgraded my Macbook to the new Mountain Lion with the intention to te
 
 Gatekeeper is a new security feature added in Mountain Lion that by default only allows applications to run if they are signed by a developer. In the default setup this means only applications downloaded from the AppStore or signed by a developer with a valid Apple Developer ID signature can be run on your system. The default setting that my system was left post upgrade is shown in the below screenshot.
 
-<a href="http://zxiiro.files.wordpress.com/2012/08/screen-shot-2012-08-23-at-11-26-47-am.png"><img class="alignnone size-medium wp-image-51" title="Gatekeeper" src="http://zxiiro.files.wordpress.com/2012/08/screen-shot-2012-08-23-at-11-26-47-am.png?w=300" alt="" width="300" height="91" /></a>
+<a href="/assets/blog/2012-08/screen-shot-2012-08-23-at-11-26-47-am.png"><img class="alignnone size-medium wp-image-51" title="Gatekeeper" src="/assets/blog/2012-08/screen-shot-2012-08-23-at-11-26-47-am.png?w=300" alt="" width="300" height="91" /></a>
 
 &nbsp;
 
@@ -26,7 +26,7 @@ So in theory this should mean that I should not be able to run unsigned applicat
 
 &nbsp;
 
-<a href="http://zxiiro.files.wordpress.com/2012/08/screen-shot-2012-08-23-at-11-38-34-am1.png"><img class="alignnone size-full wp-image-53" title="Unidentified" src="http://zxiiro.files.wordpress.com/2012/08/screen-shot-2012-08-23-at-11-38-34-am1.png" alt="" width="408" height="188" /></a>
+<a href="/assets/blog/2012-08/screen-shot-2012-08-23-at-11-38-34-am1.png"><img class="alignnone size-full wp-image-53" title="Unidentified" src="/assets/blog/2012-08/screen-shot-2012-08-23-at-11-38-34-am1.png" alt="" width="408" height="188" /></a>
 
 &nbsp;
 
