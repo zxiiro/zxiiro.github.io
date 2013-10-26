@@ -9,7 +9,15 @@ title: Thanh's Blog
       {% for post in site.posts limit: 10 %}
       <div class="container">
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3><hr style="margin:0px">
-        <i>Posted on {{ post.date | date_to_long_string }}</i>
+        <div class="container">
+          <i>Posted on {{ post.date | date_to_long_string }}</i>
+          <div class="container pull-right">
+            {% for tag in post.tags %}
+            <a class="badge" href="/blog/tags.html#{{ tag }}">{{ tag }}</a>&nbsp;
+            {% endfor %}
+          </div>
+        </div>
+        <hr style="margin:0px">
 
         <p>{{ post.content }}</p>
       </div>
@@ -38,7 +46,10 @@ title: Thanh's Blog
         </div>
         <!-- end Recent Posts -->
 
-        <div class="panel-footer"><small><b><a href="/blog/archives.html">Archives</a></b></small></div>
+        <div class="panel-footer">
+          <small><b><a href="/blog/archives.html">Archives</a></b></small><br>
+          <small><b><a href="/blog/tags.html">Tags</a></b></small>
+        </div>
         <!-- end Archives -->
       </div>
 

@@ -4,16 +4,18 @@
 
 <div class="container">
   <h1>{{ page.title }}</h1><hr style="margin:0px">
-  <i>Posted on {{ page.date }}</i>
+  <div class="container">
+    <i>Posted on {{ page.date | date_to_long_string }}</i>
+    <div class="container pull-right">
+      <i class="icon-tags"></i>
+      {% for tag in page.tags %}
+      <a class="badge" href="/blog/tags.html#{{ tag }}">{{ tag }}</a>&nbsp;
+      {% endfor %}
+    </div>
+  </div>
+  <hr style="margin:0px">
 
   <p>{{ content }}</p>
-
-  <div class="container">
-    <i class="icon-tags"></i>
-    {% for tag in page.tags %}
-    {{ tag }},
-    {% endfor %}
-  </div>
 </div>
 
 <!-- next / previous post navigation -->
