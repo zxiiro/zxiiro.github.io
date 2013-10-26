@@ -6,7 +6,7 @@ title: Thanh's Blog
   <div class="row">
     <div class="col-xs-12 col-md-9">
 
-      {% for post in site.posts limit: 10 %}
+      {% for post in site.posts limit: 5 %}
       <div class="container">
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3><hr style="margin:0px">
         <div class="container">
@@ -34,7 +34,7 @@ title: Thanh's Blog
         <div class="panel-body">
 
           <table class="table table-condensed table-hover">
-            {% for post in site.posts limit:5 %}
+            {% for post in site.posts limit: 5 %}
             <tr>
               <td><i class="icon-li icon-caret-right"></i></td>
               <td>
