@@ -5,6 +5,7 @@ categories:
 - eclipse
 tags:
 - eclipse
+- git
 status: publish
 type: post
 published: true

@@ -4,7 +4,9 @@ title: Optimizing Freeseer Controller GUI Design
 categories:
 - fosslc
 - freeseer
-tags: []
+tags:
+- freeseer
+- python
 status: publish
 type: post
 published: true

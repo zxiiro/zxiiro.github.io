@@ -4,7 +4,9 @@ title: Redesigned Recording options in Config Tool
 categories:
 - fosslc
 - freeseer
-tags: []
+tags:
+- freeseer
+- python
 status: publish
 type: post
 published: true

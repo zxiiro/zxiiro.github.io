@@ -5,8 +5,8 @@ categories:
 - fosslc
 - freeseer
 tags:
-- software
-- technology
+- freeseer
+- python
 status: publish
 type: post
 published: true

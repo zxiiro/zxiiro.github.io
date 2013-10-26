@@ -4,7 +4,8 @@ title: Hello world!
 categories:
 - fosslc
 - freeseer
-tags: []
+tags:
+- freeseer
 status: publish
 type: post
 published: true

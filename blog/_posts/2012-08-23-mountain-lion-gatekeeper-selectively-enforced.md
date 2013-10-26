@@ -4,7 +4,9 @@ title: Mountain Lion / Gatekeeper selectively enforced?
 categories:
 - eclipse
 - macosx
-tags: []
+tags:
+- eclipse
+- macosx
 status: publish
 type: post
 published: true
