@@ -14,12 +14,12 @@ mode on the other end. Doesn't matter which.
 
 Server Usage:
 <pre>
-  iperf -s
+    iperf -s
 </pre>
 
 Client Usage:
 <pre>
-iperf -c host/ip
+    iperf -c host/ip
 </pre>
 
 Basically you want to run it with the "-s" option on the serverside and the "-c" option on the client side. On the
