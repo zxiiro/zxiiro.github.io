@@ -7,7 +7,7 @@
   <div class="container">
     <i>Posted on {{ page.date | date_to_long_string }}</i>
     <div class="container pull-right">
-      <i class="icon-tags"></i>
+      <i class="fa fa-tags"></i>
       {% for tag in page.tags %}
       <a class="badge" href="/blog/tags.html#{{ tag }}">{{ tag }}</a>&nbsp;
       {% endfor %}
