@@ -13,11 +13,13 @@ There are 2 modes this tool runs in. Server and Client, you will need to run it 
 mode on the other end. Doesn't matter which.
 
 Server Usage:
+
 <pre>
     iperf -s
 </pre>
 
 Client Usage:
+
 <pre>
     iperf -c host/ip
 </pre>
@@ -26,6 +28,7 @@ Basically you want to run it with the "-s" option on the serverside and the "-c"
 client end you will also need to provide the server's hostname or ip
 
 Here is an example of what it looks like when I run it on my network.
+
 <pre>
 ------------------------------------------------------------
 Client connecting to 192.168.32.50, TCP port 5001

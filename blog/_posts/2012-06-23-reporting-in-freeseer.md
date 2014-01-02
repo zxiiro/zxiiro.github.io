@@ -24,11 +24,13 @@ To access the reporting interface, with freeseer-record open simply click <stron
 <a href="/assets/blog/2012-06/report-1.png"><img class="img-responsive img-thumbnail" title="Reporting Interface" src="/assets/blog/2012-06/report-1.png" alt="Reporting Interface" width="300" height="115" /></a>
 
 The form has 3 fields which need to be assessed by the reporter.
+
 <ol>
 	<li>A comment describing the issue seen.</li>
 	<li>A type of issue, one of "No Issue", "No Audio", "No Video", and "No Audio/Video".</li>
 	<li>A checkbox indicating if a Release Form was received or not.</li>
 </ol>
+
 The last item is a new feature we added for events where presenters must sign a release form indicating they are giving permission to record their talk. Typicially this option is used with the "No Issue" flag unless there are issues with the recording.
 
 &nbsp;
