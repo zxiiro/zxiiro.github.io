@@ -2,18 +2,18 @@
 title: "Thanh's online resume"
 layout: default
 ---
-<div class="container">
-  <div class="row">
-    <div class="col-md-4">
-      <h2>Thanh Ha</h2>
+<div class="container-fluid">
+  <div class="jumbotron">
+    <div class="pull-right">
       {% include resume/contact.html %}
     </div>
-    <div class="col-md-8">
-      {% include resume/school.html %}
-      {% include resume/skills.html %}
-      {% include resume/work.html %}
-      {% include resume/volunteer.html %}
-      {% include resume/references.html %}
+    <div class="container">
+      <h1>Thanh Ha</h1>
     </div>
   </div>
+  {% include resume/school.html %}
+  {% include resume/skills.html %}
+  {% include resume/work.html %}
+  {% include resume/volunteer.html %}
+  {% include resume/references.html %}
 </div>
