@@ -23,7 +23,7 @@ title: Thanh's Blog
 </div>
 
 <!-- Side bar start -->
-<div class="col-md-3 hidden-sm">
+<div class="col-md-3 hidden-xs hidden-sm">
   <div class="panel panel-default" data-spy="affix">
     <div class="panel-heading"><small><b>Recent Posts</b></small></div>
     <div class="panel-body">
