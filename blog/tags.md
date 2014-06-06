@@ -2,8 +2,8 @@
 layout: default
 title: "Thanh's Blog Tags"
 ---
-<div class="container">
-  <div class="container alert alert-info">
+<div class="col-xs-12">
+  <div class="alert alert-info">
     {% for tag_ in site.tags %}
       {% capture tag %}{{ tag_ | first }}{% endcapture %}
       <a class="label label-info" href="#{{ tag }}">{{ tag }}</a>&nbsp;
@@ -11,7 +11,7 @@ title: "Thanh's Blog Tags"
   </div>
 </div>
 
-<div class="container">
+<div class="col-xs-12">
   <table class="table table-condensed table-hover">
     {% for tag_ in site.tags %}
       {% capture tag %}{{ tag_ | first }}{% endcapture %}

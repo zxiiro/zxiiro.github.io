@@ -2,7 +2,7 @@
 layout: default
 title: Thanh's Blog Archives
 ---
-<div class="container">
+<div class="col-xs-12">
   <h2>Blog Archives</h2>
 
   <table class="table table-condensed table-hover">
@@ -21,5 +21,4 @@ title: Thanh's Blog Archives
       <tbody><tr><td>{{ post.date | date:"%b" }}</td><td><a href="{{ post.url }}">{{ post.title }}</a></td></tr></tbody>
     {% endfor %}
   </table>
-
 </div>
