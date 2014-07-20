@@ -15,7 +15,7 @@ title: Thanh's Blog
     </div>
     <hr style="margin:0px">
 
-    <p>{{ post.content }}</p>
+    <div>{{ post.content }}</div>
   </div>
   <hr>
   {% endfor %}
