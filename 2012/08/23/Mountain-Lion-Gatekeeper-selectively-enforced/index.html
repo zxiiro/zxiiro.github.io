@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Mountain Lion / Gatekeeper selectively enforced? | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="I recently upgraded my Macbook to the new Mountain Lion with the intention to test the new Gatekeeper feature it provides to understand what it would take to provide packages that will work in the new">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mountain Lion / Gatekeeper selectively enforced?">
+<meta property="og:url" content="http://www.zxiiro.ca/2012/08/23/Mountain-Lion-Gatekeeper-selectively-enforced/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="I recently upgraded my Macbook to the new Mountain Lion with the intention to test the new Gatekeeper feature it provides to understand what it would take to provide packages that will work in the new">
+<meta property="og:image" content="http://www.zxiiro.ca/gatekeeper.png">
+<meta property="og:image" content="http://www.zxiiro.ca/unidentified.png">
+<meta property="og:updated_time" content="2015-08-23T23:40:44.848Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Mountain Lion / Gatekeeper selectively enforced?">
+<meta name="twitter:description" content="I recently upgraded my Macbook to the new Mountain Lion with the intention to test the new Gatekeeper feature it provides to understand what it would take to provide packages that will work in the new">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +99,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Mountain-Lion-Gatekeeper-selectively-enforced" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +111,35 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Mountain Lion / Gatekeeper selectively enforced?
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2012/08/23/Mountain-Lion-Gatekeeper-selectively-enforced/" class="article-date">
+  <time datetime="2012-08-23T19:58:29.000Z" itemprop="datePublished">2012-08-23</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>I recently upgraded my Macbook to the new Mountain Lion with the intention to test the new Gatekeeper feature it provides to understand what it would take to provide packages that will work in the new OS. After doing a few test runs with unsigned applications I noticed a few oddities that I wouldn’t have expected: I noticed in a few cases I was able to run my application despite it being unsigned even with the default settings.</p>
+<p>Gatekeeper is a new security feature added in Mountain Lion that by default only allows applications to run if they are signed by a developer. In the default setup this means only applications downloaded from the AppStore or signed by a developer with a valid Apple Developer ID signature can be run on your system. The default setting that my system was left post upgrade is shown in the below screenshot.</p>
+<p><img src="gatekeeper.png" alt="Gatekeeper"></p>
+<p>So in theory this should mean that I should not be able to run unsigned applications on my system. I thought I’d give this a try by downloading the latest Eclipse SDK 4.2 to see if it’ll run. As expected when I try to run the application I am presented with a popup below that tells me the application cannot be opened because it is from an unidentified developer.</p>
+<p><img src="unidentified.png" alt="Unidentified"></p>
+<p>At this point I thought great Gatekeeper’s doing it’s job and it seems to be working. However I noticed I was able to run applications that I compiled on my own machine without them being signed. Thinking this was a weird behaviour I thought I’d investigate it a little more. Noticing that the popup mentions that the application was downloaded using “Google Chrome” on a specific date I thought it’d try using different less conventional browsers to download the same application.</p>
+<p>My first attempt I downloaded the same application via SCP from another computer of mine. When I tried to run it Gatekeeper did not prevent me from launching the unsigned application. Instead Eclipse launched just fine without any complaints.</p>
+<p>Thinking maybe Gatekeeper doesn’t consider SCP to be “the internet” I thought I’d try downloading the same Application using wget instead. So I pointed my wget to the Eclipse Download page for Eclipse SDK 4.2. When I tried to run the Eclipse SDK downloaded by wget I was still able to run it without any complaints from Gatekeeper despite again still being an unsigned application.</p>
+<p>This seems to be a strange implementation of security to me. Admittedly most users will likely use a normal web browser such as Safari or Chrome or Firefox, etc… however it is strange to me that this security feature seems to be selectively active depending where your files come from and perhaps seems to be not as secure as it should be.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2012/08/23/Mountain-Lion-Gatekeeper-selectively-enforced/" data-id="cidp4yz2k000imvndowma1wrs" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/eclipse/">eclipse</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +160,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2012/10/17/Optimizing-Freeseer-Controller-GUI-Design/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Optimizing Freeseer Controller GUI Design
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/06/24/Reporting-in-Freeseer/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Reporting in Freeseer</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

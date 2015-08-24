@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Quick Tip - Speeding up &quot;git status&quot; in a repo with multiple submodules | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="Something that’s always bothered me was when I work on a repo that has numerous submodules, as more and more get added it seems like it takes longer and longer to run the command “git status”.
+It turn">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quick Tip - Speeding up "git status" in a repo with multiple submodules">
+<meta property="og:url" content="http://www.zxiiro.ca/2013/07/26/Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="Something that’s always bothered me was when I work on a repo that has numerous submodules, as more and more get added it seems like it takes longer and longer to run the command “git status”.
+It turn">
+<meta property="og:updated_time" content="2015-08-24T00:11:09.997Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Quick Tip - Speeding up "git status" in a repo with multiple submodules">
+<meta name="twitter:description" content="Something that’s always bothered me was when I work on a repo that has numerous submodules, as more and more get added it seems like it takes longer and longer to run the command “git status”.
+It turn">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +100,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +112,34 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Quick Tip - Speeding up &quot;git status&quot; in a repo with multiple submodules
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2013/07/26/Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules/" class="article-date">
+  <time datetime="2013-07-26T06:49:25.000Z" itemprop="datePublished">2013-07-26</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
-
+        <p>Something that’s always bothered me was when I work on a repo that has numerous submodules, as more and more get added it seems like it takes longer and longer to run the command “git status”.</p>
+<p>It turns out this is due to git scanning all the directories to find untracked files so when it shows you the status in the aggregator repo it’ll tell which repos have untracked files. For me I’d rather just find out which submodules have modifications and if there’s any new commits most of the time.</p>
+<p>It is possible to have git status ignore these untracked files and as a result speed up “git status” by adding the following line to your “.git/config” for each submodule you want to ignore untracked files for:</p>
+<pre><code><span class="attribute">ignore </span>=<span class="string"> dirty</span>
+</code></pre><p>Example:</p>
+<pre><code>[<span class="keyword">submodule </span><span class="string">"submodule.repo"</span>]
+    url = ssh://localhost/<span class="keyword">submodule.repo
+</span>    ignore = dirty
+</code></pre>
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2013/07/26/Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules/" data-id="cidp5n0zv000dp0ndklxw3bj6" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/eclipse/">eclipse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/git/">git</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +160,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2013/08/08/Setting-up-Eclipse-CDT-for-SDL2-development/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Setting up Eclipse CDT for SDL2 development
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/11/14/Optimizing-Freeseer-Controller-GUI-Design-Part-2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Optimizing Freeseer Controller GUI Design (Part 2)</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

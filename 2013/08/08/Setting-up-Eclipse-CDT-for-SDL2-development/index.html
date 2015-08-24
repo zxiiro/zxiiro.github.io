@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Setting up Eclipse CDT for SDL2 development | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="This tutorial assumes you already have SDL2 installed. If your on Linux install it using your Distro’s package manager. On OpenSUSE you can find SDL2 in the Games repository, details can be found here">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setting up Eclipse CDT for SDL2 development">
+<meta property="og:url" content="http://www.zxiiro.ca/2013/08/08/Setting-up-Eclipse-CDT-for-SDL2-development/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="This tutorial assumes you already have SDL2 installed. If your on Linux install it using your Distro’s package manager. On OpenSUSE you can find SDL2 in the Games repository, details can be found here">
+<meta property="og:updated_time" content="2015-08-24T00:17:43.528Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Setting up Eclipse CDT for SDL2 development">
+<meta name="twitter:description" content="This tutorial assumes you already have SDL2 installed. If your on Linux install it using your Distro’s package manager. On OpenSUSE you can find SDL2 in the Games repository, details can be found here">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +97,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Setting-up-Eclipse-CDT-for-SDL2-development" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +109,74 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Setting up Eclipse CDT for SDL2 development
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2013/08/08/Setting-up-Eclipse-CDT-for-SDL2-development/" class="article-date">
+  <time datetime="2013-08-08T17:00:25.000Z" itemprop="datePublished">2013-08-08</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>This tutorial assumes you already have SDL2 installed. If your on Linux install it using your Distro’s package manager. On OpenSUSE you can find SDL2 in the Games repository, details can be found here <a href="http://en.opensuse.org/Games" target="_blank" rel="external">http://en.opensuse.org/Games</a></p>
+<p>First you’ll want a copy of Eclipse for C/C++ Developers from <a href="http://www.eclipse.org/downloads/" target="_blank" rel="external">http://www.eclipse.org/downloads/</a></p>
+<p>Once downloaded you’ll want to unzip it somewhere on your harddrive. I’m on Linux so I unzipped it to /home/myuser/apps/</p>
+<p>Launch Eclipse, it will ask you to pick a workspace. I just leave it the defaults and move on.</p>
+<p>Create a new c++ project (File &gt; New &gt; C++ Project). You will need to pick a toolchain, I’m on Linux so I picked Linux GCC.</p>
+<p>Before you can build your project there is a few things you will need to configure.</p>
+<p><strong>If you want to use c++11 do the following:</strong></p>
+<ol>
+<li>Right click your Project under “Package Explorer” and select Properties.</li>
+<li>Select (C/C++ Build &gt; Settings &gt; GCC C++ Compiler &gt; Miscellaneous)</li>
+<li>Under “Other flags” add: <strong>-std=c++0x</strong></li>
+<li>Click Apply then OK</li>
+</ol>
+<p><strong>Configure Eclipse to use SDL2</strong></p>
+<ol>
+<li>Right click your Project under “Package Explorer” and select Properties.</li>
+<li>Select (C/C++ General &gt; Paths and Symbols &gt; Libraries)</li>
+<li>Click “Add” and add “SDL2” and click OK</li>
+<li>Click “Add” and add “SDL2main” and click OK</li>
+</ol>
+<p>Your project should be configured for SDL2 development now. Lets try creating a quick Hello World program just to make sure.</p>
+<p>Create a main.cpp file and add the following code.</p>
+<pre><code><span class="preprocessor">#<span class="keyword">include</span> <span class="string">"SDL2/SDL.h"</span>;</span>
+
+<span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>** argv)</span></span>{
+
+    <span class="comment">// Start SDL2</span>
+    SDL_Init(SDL_INIT_EVERYTHING);
+
+    <span class="comment">// Create a Window in the middle of the screen</span>
+    SDL_Window *window = <span class="literal">nullptr</span>;
+    window = SDL_CreateWindow(<span class="string">"Hello World!"</span>,
+            SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, <span class="comment">// x and y</span>
+            <span class="number">640</span>, <span class="number">480</span>, <span class="comment">// Width and Height</span>
+            SDL_WINDOW_SHOWN);
+
+    <span class="comment">// Delay so that we can see the window appear</span>
+    SDL_Delay(<span class="number">2000</span>);
+
+    <span class="comment">// Cleanup and Quit</span>
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+
+    <span class="keyword">return</span> <span class="number">0</span>;
+}
+</code></pre><p>You should now be able to build and run this code.</p>
+<p>To build press <strong>ctrl+b</strong>.<br>To run press <strong>ctrl+f11</strong>.</p>
+<p>A blank window should appear with the title “Hello World!”. If you see this congratulations you’ve successfully configured SDL2 in Eclipse.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2013/08/08/Setting-up-Eclipse-CDT-for-SDL2-development/" data-id="cidp65nvp0009tmnd0ise3gjk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/c/">c++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/eclipse/">eclipse</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/sdl/">sdl</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +197,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2013/09/24/Quick-Tip-Razor-Megalodon-on-Linux/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Quick Tip - Razor Megalodon on Linux
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2013/07/26/Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Quick Tip - Speeding up &quot;git status&quot; in a repo with multiple submodules</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

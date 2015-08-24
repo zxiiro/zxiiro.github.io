@@ -3,18 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Quick Tip - Share steam library with multiple Linux accounts and systems | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="If you use Steam on Linux one of the annoying things I’ve found is that unlike on Windows, Steam for Linux installsto your $HOME directory. This means every user will have their own Steam installed an">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quick Tip - Share steam library with multiple Linux accounts and systems">
+<meta property="og:url" content="http://www.zxiiro.ca/2013/10/27/Quick-Tip-Share-steam-library-with-multiple-Linux-accounts-and-systems/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="If you use Steam on Linux one of the annoying things I’ve found is that unlike on Windows, Steam for Linux installsto your $HOME directory. This means every user will have their own Steam installed an">
+<meta property="og:image" content="http://www.zxiiro.ca/steam-libraries.png">
+<meta property="og:updated_time" content="2015-08-24T00:23:24.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Quick Tip - Share steam library with multiple Linux accounts and systems">
+<meta name="twitter:description" content="If you use Steam on Linux one of the annoying things I’ve found is that unlike on Windows, Steam for Linux installsto your $HOME directory. This means every user will have their own Steam installed an">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +98,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Quick-Tip-Share-steam-library-with-multiple-Linux-accounts-and-systems" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +110,38 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Quick Tip - Share steam library with multiple Linux accounts and systems
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2013/10/27/Quick-Tip-Share-steam-library-with-multiple-Linux-accounts-and-systems/" class="article-date">
+  <time datetime="2013-10-27T04:00:00.000Z" itemprop="datePublished">2013-10-27</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>If you use Steam on Linux one of the annoying things I’ve found is that unlike on Windows, Steam for Linux installs<br>to your $HOME directory. This means every user will have their own Steam installed and what’s more their own games<br>installed. So on a shared system you might end up with the same games being installed multiple times.</p>
+<p>I recently discovered Steam has a feature that allows you to install games to a alternate location called Steam<br>Libraries. This feature allows you to create a Library at a new location such as an alternate harddrive or partition if<br>you don’t like where Steam installs games by default. What I thought I’d try doing was creating a new user group on my<br>system which I called “steam” and I added all the users on my system which used Steam to this group. Then I created a<br>shared directory on my system called /steam-library which I then set the permissions to allow reading, writing and<br>executing files from this directory to anyone in the steam group.</p>
+<p>Next I launched Steam and added /steam-library as a new Library in Steam and installed games to this location. After<br>installing the games you tell all other users who use Steam on this computer to do the same. If a game they want to<br>install is already in the Library, it’ll just appear in their account, no unnecessary downloading.</p>
+<p><img src="steam-libraries.png" alt="Steam Libraries"></p>
+<p><strong>Quick Steps</strong></p>
+<pre><code>mkdir /steam-<span class="keyword">library</span>
+groupadd steam
+chgrp steam /steam-<span class="keyword">library</span>
+chmod <span class="number">770</span> /steam-<span class="keyword">library</span>
+useradd -G steam your_user
+# add /steam-<span class="keyword">library</span> <span class="keyword">to</span> steam <span class="keyword">on</span> <span class="keyword">all</span> pc<span class="attribute">'s</span> <span class="keyword">and</span> user accounts
+</code></pre><p>For those who have multiple computers. You can share /steam-library as an NFS share over the network and mount it<br>on your other computers too. Having a single point where your shared library lives will save you from having to<br>download the same files multiple times over the internet.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2013/10/27/Quick-Tip-Share-steam-library-with-multiple-Linux-accounts-and-systems/" data-id="cidp6joih0007sknde8ctrrbk" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/">linux</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +162,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2013/10/29/Quick-Tip-Testing-network-performance-between-computers-with-iperf/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Quick Tip - Testing network performance between computers with iperf
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2013/09/24/Quick-Tip-Razor-Megalodon-on-Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Quick Tip - Razor Megalodon on Linux</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

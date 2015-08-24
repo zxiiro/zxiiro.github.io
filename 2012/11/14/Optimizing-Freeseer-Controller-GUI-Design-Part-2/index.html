@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Optimizing Freeseer Controller GUI Design (Part 2) | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="Last time we looked at redesigning the Freeseer Controller Client and found some nice ways to improve the design to make it more usable and neater. Since then I’ve pushed some code up for review which">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optimizing Freeseer Controller GUI Design (Part 2)">
+<meta property="og:url" content="http://www.zxiiro.ca/2012/11/14/Optimizing-Freeseer-Controller-GUI-Design-Part-2/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="Last time we looked at redesigning the Freeseer Controller Client and found some nice ways to improve the design to make it more usable and neater. Since then I’ve pushed some code up for review which">
+<meta property="og:image" content="http://www.zxiiro.ca/server-01.png">
+<meta property="og:image" content="http://www.zxiiro.ca/server-02.png">
+<meta property="og:image" content="http://www.zxiiro.ca/server-03.png">
+<meta property="og:updated_time" content="2015-08-23T23:52:34.177Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Optimizing Freeseer Controller GUI Design (Part 2)">
+<meta name="twitter:description" content="Last time we looked at redesigning the Freeseer Controller Client and found some nice ways to improve the design to make it more usable and neater. Since then I’ve pushed some code up for review which">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +100,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Optimizing-Freeseer-Controller-GUI-Design-Part-2" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +112,41 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Optimizing Freeseer Controller GUI Design (Part 2)
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2012/11/14/Optimizing-Freeseer-Controller-GUI-Design-Part-2/" class="article-date">
+  <time datetime="2012-11-14T07:09:50.000Z" itemprop="datePublished">2012-11-14</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>Last time we looked at redesigning the Freeseer Controller Client and found some nice ways to improve the design to make it more usable and neater. Since then I’ve pushed some code up for review which can be found at <a href="https://github.com/Freeseer/freeseer/pull/225" target="_blank" rel="external">https://github.com/Freeseer/freeseer/pull/225</a>.</p>
+<p>Today I want to look at what can be done with the Controller Server GUI to make it neater. First lets take a look at what the server GUI looks like today.</p>
+<p><img src="server-01.png" alt="Current Controller Server GUI"></p>
+<p>Couple things I noticed when playing around with UI that you can’t see from the screenshot. File, and Edit menus don’t seem to do anything. A quick look at the code behind finds that there’s no code to support those buttons. Actually the Edit button has no options listed when clicked either. For this I think the Quit button in the file menu should be coded to close the app. The edit menu will likely change to a Language menu and allow the user to change languages of the UI via the menu.</p>
+<p>The send message button seems pointless to me. What it does is sends a message to all clients connected to the Server but this message is shown as a log on the clients. I’m not sure if there’s any real purpose for this and it adds complexity to the settings window for no reason. I’m thinking this will likely be removed.</p>
+<p>The properties section at the bottom allows the user to copy text and paste it to something like email / IM etc… so that someone at the client end can copy paste it into the client settings. I think these properties can be simplified and take up less space.</p>
+<p>This leaves us with Server settings (IP, Port, Passphrase) and the Client Controls (List, Buttons). We can save some screen estate if we utilize the toolbox like we did with the Client GUI. I also noticed the Port is not configurable, in the redesign I would like port to be a configurable option.</p>
+<p>I made a mockup of some ideas I had for what I think can be improved upon below. First lets look at the new Server Settings tab.</p>
+<p><img src="server-02.png" alt="Server Settings"></p>
+<p>Server settings now consists of simply the IP address, Port, and Passphrase (very similar to the redesigned Client Settings tab). I imagine the IP Address dropdown will be auto populated with IP addresses detected by the software including 0.0.0.0 (listen on all interfaces).</p>
+<p>There is also a line edit below the “Status: “ at the top. This is the new copy-paste dialog. When the user configurs the server this box will be auto-populated with the server settings in the format “passphrase@host:port” which can be copied and pasted and sent to someone configuring the client at the other end.</p>
+<p>Next lets look at the Control Clients tab:</p>
+<p><img src="server-03.png" alt="Control Clients"></p>
+<p>This tab looks very similar to what the interface for controlling clients that currently exists on the Controller Server GUI. By placing it in a tab though we can hide the settings and show just this tab once the server has started.</p>
+<p>If anyone has any ideas on other improves please comment and let me know. I’m open to suggestions.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2012/11/14/Optimizing-Freeseer-Controller-GUI-Design-Part-2/" data-id="cidp5e7880009p0ndjo3v09x1" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/freeseer/">freeseer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/python/">python</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +167,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2013/07/26/Quick-Tip-Speeding-up-git-status-in-a-repo-with-multiple-submodules/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Quick Tip - Speeding up &quot;git status&quot; in a repo with multiple submodules
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/10/17/Optimizing-Freeseer-Controller-GUI-Design/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Optimizing Freeseer Controller GUI Design</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

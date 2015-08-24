@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Optimizing Freeseer Controller GUI Design | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="Lately I’ve been looking into ways we can improve Freeseer’s GUI to make it more simple and less complex looking. My current attention is at the Freeseer Controller Client UI. Lets take a look at what">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Optimizing Freeseer Controller GUI Design">
+<meta property="og:url" content="http://www.zxiiro.ca/2012/10/17/Optimizing-Freeseer-Controller-GUI-Design/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="Lately I’ve been looking into ways we can improve Freeseer’s GUI to make it more simple and less complex looking. My current attention is at the Freeseer Controller Client UI. Lets take a look at what">
+<meta property="og:image" content="http://www.zxiiro.ca/connclient-01.png">
+<meta property="og:image" content="http://www.zxiiro.ca/connclient-02.png">
+<meta property="og:image" content="http://www.zxiiro.ca/connclient-03.png">
+<meta property="og:updated_time" content="2015-08-23T23:49:00.074Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Optimizing Freeseer Controller GUI Design">
+<meta name="twitter:description" content="Lately I’ve been looking into ways we can improve Freeseer’s GUI to make it more simple and less complex looking. My current attention is at the Freeseer Controller Client UI. Lets take a look at what">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +100,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Optimizing-Freeseer-Controller-GUI-Design" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +112,36 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Optimizing Freeseer Controller GUI Design
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2012/10/17/Optimizing-Freeseer-Controller-GUI-Design/" class="article-date">
+  <time datetime="2012-10-17T06:14:17.000Z" itemprop="datePublished">2012-10-17</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>Lately I’ve been looking into ways we can improve Freeseer’s GUI to make it more simple and less complex looking. My current attention is at the Freeseer Controller Client UI. Lets take a look at what it looks like today.</p>
+<p><img src="connclient-01.png" alt="Conntroller Client Widget Today"></p>
+<p>Without looking at code, I think it is likely using only 1 layout the QVBoxLayout which lays out widgets in a Vertical layout. While that is a simple and easy way of getting widgets attached to a window it tends to make GUIs rather long.</p>
+<p>I bounced some ideas off to the guys in IRC and came up with a mockup for some improvements to this layout.</p>
+<p><img src="connclient-02.png" alt="New Connection Settings"></p>
+<p><img src="connclient-03.png" alt="New Recent Connections"></p>
+<p>This new layout uses a QToolBox to separate the Connection settings and the Recent Connections log window. This allows the Widget to take up less screen estate as the logging window takes up a lot of space.</p>
+<p>Another improvement is using the QFormLayout to set the Host/Port/Passphrase Labels on the left and their respective Edit boxes on the right. We have also reduced the Start and Connect button to simply be a single “Connect” button. From a user’s perspective having a start and connect button is very confusing especially if you don’t know what the difference is.</p>
+<p>Finally removing completely the copy-paste box for copying connection information from a server instance. It simply took up way too much screen space it composes of a Text box as well as 2 buttons. My new idea is to change the copy paste text to simplify it to something like “passphrase@host:port” and allow the user to paste this into the host box. Logic can be set so that if it detects the correct format it will copy the details to the correct edit boxes.</p>
+<p>Any ideas on further improvements to the mockups are welcome.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2012/10/17/Optimizing-Freeseer-Controller-GUI-Design/" data-id="cidp5aaut0003p0ndjlylgr61" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/freeseer/">freeseer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/python/">python</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +162,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2012/11/14/Optimizing-Freeseer-Controller-GUI-Design-Part-2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Optimizing Freeseer Controller GUI Design (Part 2)
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/08/23/Mountain-Lion-Gatekeeper-selectively-enforced/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Mountain Lion / Gatekeeper selectively enforced?</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

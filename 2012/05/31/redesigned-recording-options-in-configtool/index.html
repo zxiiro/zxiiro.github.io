@@ -3,18 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Redesigned Recording options in Config Tool | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="Wanted to post a quick update on some Config Tool UI changes I’ve been working on in Freeseer experimental. The UI used to be a bit confusing where one would have to activate a plugin and then move to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Redesigned Recording options in Config Tool">
+<meta property="og:url" content="http://www.zxiiro.ca/2012/05/31/redesigned-recording-options-in-configtool/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="Wanted to post a quick update on some Config Tool UI changes I’ve been working on in Freeseer experimental. The UI used to be a bit confusing where one would have to activate a plugin and then move to">
+<meta property="og:image" content="http://www.zxiiro.ca/configtool_recording2.png">
+<meta property="og:image" content="http://www.zxiiro.ca/configtool_recording.png">
+<meta property="og:updated_time" content="2015-08-23T23:30:38.398Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Redesigned Recording options in Config Tool">
+<meta name="twitter:description" content="Wanted to post a quick update on some Config Tool UI changes I’ve been working on in Freeseer experimental. The UI used to be a bit confusing where one would have to activate a plugin and then move to">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +99,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-redesigned-recording-options-in-configtool" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +111,36 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Redesigned Recording options in Config Tool
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2012/05/31/redesigned-recording-options-in-configtool/" class="article-date">
+  <time datetime="2012-05-31T05:26:10.000Z" itemprop="datePublished">2012-05-31</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>Wanted to post a quick update on some Config Tool UI changes I’ve been working on in Freeseer experimental. The UI used to be a bit confusing where one would have to activate a plugin and then move to the “General” tab to configure the active plugins which turned out to be quite a few unnecessary steps.</p>
+<p>I decided to remove the whole “activate / deactivate” function in the tool. Now instead of needing to activate plugins the tool will just load any plugins it finds which removes the whole step of activating plugins. The below image shows the new plugin screen which removes the checkbox for activating / deactivating plugins. The purpose of this screen now is to simply show you which plugins exist on your system.</p>
+<p><img src="configtool_recording2.png" alt="ConfigTool Recording 2"></p>
+<p>We used to have some video options in the “General” tab but that has now been moved to a new tab “Recording” which adds a few new options as shown below.</p>
+<p><img src="configtool_recording.png" alt="ConfigTool Recording 1"></p>
+<p>Audio / Video input dropdown boxes will now show all mixer plugins that exist on the system (in the past it only loaded activated plugins). Clicking <strong>Setup</strong> will allow you to configure the specific inputs to use and other video mixer settings.</p>
+<p>What’s new here though is the options to Record to a File (default: enabled) and Record to Stream (default: disabled). The dropdown boxes will allow the user select the output plugins for each category (in the past this was done by activating / deactivating the output plugin). I think this new layout makes Freeseer a little bit more intuitive to configure.</p>
+<p>What this means for plugin developers though is that when designing output plugins there is a new variable which needs to be configured <strong>recordto</strong>. This variable can be set to IOutput.FILE or IOutput.STREAM via static variables defined in the plugin module. For example.</p>
+<p>recordto = IOutput.FILE</p>
+<p>Details on the specific commit can be found at:<br><a href="https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4" target="_blank" rel="external">https://github.com/Freeseer/freeseer/compare/727c089...ab78cf4</a></p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2012/05/31/redesigned-recording-options-in-configtool/" data-id="cidp4lss90004mvnd0uoxuzqu" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/freeseer/">freeseer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/python/">python</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +161,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2012/06/16/minor-improvements-to-freeseer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Minor improvements to Freeseer
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/05/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Hello world!</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

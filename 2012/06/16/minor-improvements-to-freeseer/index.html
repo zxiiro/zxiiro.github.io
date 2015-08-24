@@ -3,18 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Minor improvements to Freeseer | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="This week I made some minor additions to Freeseer closing some old bugs. Notable ones include the following:
+Auto-Selection of Talks
+Since Freeseer is able to store the date/time of each talk via the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Minor improvements to Freeseer">
+<meta property="og:url" content="http://www.zxiiro.ca/2012/06/16/minor-improvements-to-freeseer/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="This week I made some minor additions to Freeseer closing some old bugs. Notable ones include the following:
+Auto-Selection of Talks
+Since Freeseer is able to store the date/time of each talk via the">
+<meta property="og:image" content="http://www.zxiiro.ca/elapsed.png">
+<meta property="og:updated_time" content="2015-08-23T23:53:09.993Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Minor improvements to Freeseer">
+<meta name="twitter:description" content="This week I made some minor additions to Freeseer closing some old bugs. Notable ones include the following:
+Auto-Selection of Talks
+Since Freeseer is able to store the date/time of each talk via the">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +104,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-minor-improvements-to-freeseer" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +116,36 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Minor improvements to Freeseer
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2012/06/16/minor-improvements-to-freeseer/" class="article-date">
+  <time datetime="2012-06-16T06:52:15.000Z" itemprop="datePublished">2012-06-16</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
+        <p>This week I made some minor additions to Freeseer closing some old bugs. Notable ones include the following:</p>
+<p><strong>Auto-Selection of Talks</strong></p>
+<p>Since Freeseer is able to store the date/time of each talk via the TalkEditor we can use this data to discover which talk is most likely being recorded next. The idea for this feature is that when the user presses the STOP button, Freeseer will do a search in the database within a 15 minute window from the time the STOP button was pressed and see if there’s any upcoming talks for the event-room that the user is currently recording in and automatically select it from the dropdown box. This minor addition makes the recording process slightly more automated for our volunteers at events when they are recording. You can read more about this commit at this <a href="http://github.com/Freeseer/freeseer/commit/06d14c57645917da963c924cd23c66717583ef2d" target="_blank" rel="external">link</a>.</p>
+<p><strong>Elapsed Time Display</strong></p>
+<p>Another much needed feature that was added is an Elapsed Time Display which shows the user how much time has elapsed since the recording was started. At events often times volunteers are also time trackers and this feature should assist the volunteer determine if a talk is going on for too long or not.</p>
+<p><img src="elapsed.png" alt="elapsed"></p>
+<p>As you can see in the image the Elapsed Time is placed in the bottom right corner in the statusbar of Freeseer. You can read more about this commit at this <a href="http://github.com/Freeseer/freeseer/commit/fe8523de1a69ed794b36203b21f0b9f2c2355e5f" target="_blank" rel="external">link</a>.</p>
+<p><strong>Test Video Source Improvements</strong></p>
+<p>The testvideosrc plugin was also improved to support patterns and live mode. Patterns will let you select from a choice of various image patterns supported by the plugin while live mode will allow the test source to act as a live video source. This should be useful to simulate a webcam device when you don’t have a working webcam handy.</p>
+<p>While I’ve only discussed in this post the most notable changes this week but if you would like to see a full list of changes that happened this week you can always look at the commit history <a href="https://github.com/Freeseer/freeseer/commits/experimental" target="_blank" rel="external">here</a>.</p>
 
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2012/06/16/minor-improvements-to-freeseer/" data-id="cidp4he4a0002mvnd6w7krad2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/freeseer/">freeseer</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/python/">python</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +166,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2012/06/24/Reporting-in-Freeseer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Reporting in Freeseer
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2012/05/31/redesigned-recording-options-in-configtool/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Redesigned Recording options in Config Tool</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     

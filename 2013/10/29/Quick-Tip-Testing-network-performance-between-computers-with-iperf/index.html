@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>About | zxiiro&#39;s blog</title>
+  <title>Quick Tip - Testing network performance between computers with iperf | zxiiro&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About">
-<meta property="og:url" content="http://www.zxiiro.ca/about/index.html">
+  <meta name="description" content="I discovered a handy tool to check network performance between 2 computers. This tool callediperf is quite easy to use too. You can install this tool using yourdistro’s package manager. In my case I w">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quick Tip - Testing network performance between computers with iperf">
+<meta property="og:url" content="http://www.zxiiro.ca/2013/10/29/Quick-Tip-Testing-network-performance-between-computers-with-iperf/index.html">
 <meta property="og:site_name" content="zxiiro's blog">
-<meta property="og:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
-<meta property="og:updated_time" content="2015-08-23T22:21:29.493Z">
+<meta property="og:description" content="I discovered a handy tool to check network performance between 2 computers. This tool callediperf is quite easy to use too. You can install this tool using yourdistro’s package manager. In my case I w">
+<meta property="og:updated_time" content="2015-08-24T00:26:20.454Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About">
-<meta name="twitter:description" content="I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.">
+<meta name="twitter:title" content="Quick Tip - Testing network performance between computers with iperf">
+<meta name="twitter:description" content="I discovered a handy tool to check network performance between 2 computers. This tool callediperf is quite easy to use too. You can install this tool using yourdistro’s package manager. In my case I w">
   
   
     <link rel="icon" href="/favicon.png">
@@ -97,11 +97,11 @@ ga('send', 'pageview');
           <section id="main">
             <div class="main-body-header">
 
-              <h1 class="header"><em class="page-title-link" data-url="/blog/about/index.html">About</em></h1>
+              <h1 class="header">uncategorized</h1>
             </div>
             <div class="main-body-content">
               
-  <article id="page-undefined" class="article article-single article-type-page" itemscope itemprop="blogPost">
+  <article id="post-Quick-Tip-Testing-network-performance-between-computers-with-iperf" class="article article-single article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
       <!--  -->
       
@@ -109,25 +109,41 @@ ga('send', 'pageview');
           
   
     <h1 class="article-title" itemprop="name">
-      About
+      Quick Tip - Testing network performance between computers with iperf
     </h1>
   
 
         </header>
       
       <p class="article-byline">
-        <a href="/blog/about/index.html" class="article-date">
-  <time datetime="2015-08-23T22:10:03.000Z" itemprop="datePublished">2015-08-23</time>
+        <a href="/blog/2013/10/29/Quick-Tip-Testing-network-performance-between-computers-with-iperf/" class="article-date">
+  <time datetime="2013-10-29T04:00:00.000Z" itemprop="datePublished">2013-10-29</time>
 </a>
       </p>
       <div class="article-entry" itemprop="articleBody">
-        <p>I am an Open Source developer working on Freeseer and occassional contributor to the OpenStreetMap project.</p>
-
+        <p>I discovered a handy tool to check network performance between 2 computers. This tool called<br><a href="https://code.google.com/p/iperf/" target="_blank" rel="external">iperf</a> is quite easy to use too. You can install this tool using your<br>distro’s package manager. In my case I was using OpenSUSE which was available via “zypper install iperf”.</p>
+<p>There are 2 modes this tool runs in. Server and Client, you will need to run it in server mode on one end and client<br>mode on the other end. Doesn’t matter which.</p>
+<p>Server Usage:</p>
+<pre><code>iperf <span class="operator">-s</span>
+</code></pre><p>Client Usage:</p>
+<pre><code><span class="label">iperf</span> -c host/<span class="literal">ip</span>
+</code></pre><p>Basically you want to run it with the “-s” option on the serverside and the “-c” option on the client side. On the<br>client end you will also need to provide the server’s hostname or ip</p>
+<p>Here is an example of what it looks like when I run it on my network.</p>
+<pre><code>------------------------------------------------------------
+Client connecting to <span class="number">192.168</span><span class="number">.32</span><span class="number">.50</span>, TCP port <span class="number">5001</span>
+TCP window size: <span class="number">22.9</span> KByte (<span class="keyword">default</span>)
+------------------------------------------------------------
+[  <span class="number">3</span>] local <span class="number">192.168</span><span class="number">.32</span><span class="number">.152</span> port <span class="number">40885</span> connected with <span class="number">192.168</span><span class="number">.32</span><span class="number">.50</span> port <span class="number">5001</span>
+[ ID] Interval       Transfer     Bandwidth
+[  <span class="number">3</span>]  <span class="number">0.0</span>-<span class="number">10.0</span> sec   <span class="number">897</span> MBytes   <span class="number">752</span> Mbits/sec
+</code></pre>
       </div>
       <footer class="article-footer">
-        <a data-url="http://www.zxiiro.ca/about/index.html" data-id="cidp2qpve0004e6ndkvu0jvo5" class="article-share-link"><i class="fa fa-share"></i>Share</a>
+        <a data-url="http://www.zxiiro.ca/2013/10/29/Quick-Tip-Testing-network-performance-between-computers-with-iperf/" data-id="cidp6n7f0000bskndvxdlmdp2" class="article-share-link"><i class="fa fa-share"></i>Share</a>
         
         
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/blog/tags/linux/">linux</a></li></ul>
+
       </footer>
     </div>
   </article>
@@ -148,6 +164,29 @@ ga('send', 'pageview');
       
     </ul>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/blog/2014/07/24/Contributing-to-Eclipse-Projects-via-Gerrit/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">newer</strong>
+      <p class="article-nav-title">
+        
+          Contributing to Eclipse Projects via Gerrit
+        
+      </p>
+      <i class="icon fa fa-chevron-right" id="icon-chevron-right"></i>
+    </a>
+  
+  
+    <a href="/blog/2013/10/27/Quick-Tip-Share-steam-library-with-multiple-Linux-accounts-and-systems/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">older</strong>
+      <p class="article-nav-title">Quick Tip - Share steam library with multiple Linux accounts and systems</p>
+      <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+    </a>
+  
+</nav>
+
   
   <div class="widgets-container">
     
