@@ -1,1 +1,0 @@
-Presentations by Thanh Ha
