@@ -63,6 +63,11 @@ Git, Python, PyQt4, GStreamer, PHP, Drupal, JAVA, C/C++,
 ASP.NET, HTML, CSS, Javascript, AJAX, DOM, XML, RegEx,
 PERL, Expect, Bash, SQL, SVN
 
+Technical Writing
+-----------------
+
+Sphinx
+
 
 Professional Experience
 =======================
