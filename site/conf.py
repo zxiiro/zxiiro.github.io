@@ -19,6 +19,16 @@ html_theme_options = {
     'analytics_id': 'UA-46385504-1',
     'canonical_url': 'http://www.zxiiro.ca/',
 }
+
+html_sidebars = {
+    '**': [
+        'about.html',
+        'navigation.html',
+        'relations.html',
+        'searchbox.html',
+        'donate.html',
+    ]
+}
+
 html_static_path = ['_static']
 htmlhelp_basename = 'sitedoc'
-
