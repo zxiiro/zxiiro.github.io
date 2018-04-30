@@ -1,0 +1,10 @@
+[Formatting]
+bears = LingLengthBear,SpaceConsistencyBear
+max_line_length = 80
+use_spaces = True
+files = site/**
+
+[Writing]
+bears = WriteGoodLintBear
+files = site/**.rst
+

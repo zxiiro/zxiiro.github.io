@@ -1,1 +1,3 @@
 .tox/
+_cacache/
+anonymous-cli-metrics.json
