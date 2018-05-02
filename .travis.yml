@@ -1,9 +1,13 @@
 language: python
-python:
-  - "3.6"
+matrix:
+  include:
+    - python: 3.6
+      env: TOXENV=build
+    - python: 3.6
+      env: TOXENV=coala
 
 sudo: false
 cache: pip
 
-install: pip install tox-travis
+install: pip install tox
 script: tox
