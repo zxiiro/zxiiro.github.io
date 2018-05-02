@@ -100,9 +100,9 @@ store employees, managers, as well as technicians on-site. Provided end-
 user technical support. Created a Windows batch script to automate
 configuration of Colubris Access Points for deployment. Pre-configured
 wireless access points and shipped equipment to technicians for
-installation. Tested various cellphones using UMA/SIP protocols to
-compare battery life, signal quality, call drops and hand-overs. Setup
-Trixbox for internal SIP testing.
+installation. Tested cellphones using UMA/SIP protocols to compare battery
+life, signal quality, call drops and hand-overs. Setup Trixbox for internal SIP
+testing.
 
 
 Volunteer Experience
@@ -113,8 +113,8 @@ Volunteer Experience
 
 Volunteer at the Free and Open Source Software Learning Center. Was the
 Lead Developer for Freeseer video capture software written using Python,
-PyQt4, and GStreamer. Configured laptops to be used as recording stations
-for events. Filming open source conferences and events to post them on
+PyQt4, and GStreamer. Configured laptops for use as recording stations at
+conference events. Filming open source conferences and events to post them on
 the FOSSLC website. Mentor students participating in programs such as
 GSoC, Fedora SoC, UCOSP for the Freeseer project.
 
