@@ -5,6 +5,8 @@ matrix:
       env: TOXENV=build
     - python: 3.6
       env: TOXENV=coala
+    - python: 3.6
+      env: TOXENV=linkcheck
 
 sudo: false
 cache: pip
