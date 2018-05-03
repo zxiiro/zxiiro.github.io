@@ -9,6 +9,6 @@ to the OpenStreetMap project.
    :hidden:
    :glob:
 
-   resume
+   experience
    presentations
    writings
