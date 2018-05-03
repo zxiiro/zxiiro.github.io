@@ -15,3 +15,4 @@ from Carleton University & Algonquin College in 2009 with distinction.
    experience
    presentations
    writings
+   contact
