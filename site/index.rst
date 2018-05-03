@@ -6,7 +6,7 @@ Release Engineer at the Linux Foundation, and occassional contributor
 to the OpenStreetMap project.
 
 He received his Bachelor of Information Technology - Network Technology degree
-from Carleton University & Algonquin College in 2009.
+from Carleton University & Algonquin College in 2009 with distinction.
 
 .. toctree::
    :hidden:
