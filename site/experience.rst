@@ -6,28 +6,38 @@ Experience
 
 - Provide build support to OpenDaylight projects
 - Manage services such as Jenkins, Gerrit, Nexus, Sonar
-- Develop and deploy features for OpenStack projects Jenkins Job Builder and Nodepool as required for OpenDaylight build environment
+- Develop and deploy features for OpenStack projects Jenkins Job Builder and
+  Nodepool as required for OpenDaylight build environment
 - Project Lead for OpenDaylight autorelease and releng/builder sub-projects
 - Manage documentation project for OpenDaylight and Linux Foundation Releng
 
 **Release Engineer**, Eclipse Foundation *(Feb 2012 - Sept 2014)*
 -----------------------------------------------------------------
 
-Help Eclipse projects with converting their builds from PDE to use the
-Common Build Infrastructure (CBI). Configured and maintained servers
-for the community including LTS projects and Nexus instance at the
-Foundation.
+- Provide support to Eclipse projects for the Common Build Infrastructure (CBI)
+- Provide support for the Eclipse Long Term Support (LTS) forge
+- Assist Eclipse projects with migrating builds to Maven/Tycho.
+- Gerrit deployment and maintenance
+- Hudson deployment and maintenance
+- Apache configuration and management
+- Web based code signing service development and management
+- Setup SonarQube code analysis software
 
 **Junior Support Engineer**, Nakina Systems *(Nov 2009 - Feb 2012)*
 -------------------------------------------------------------------
 
-Provide product support to customers including Alcatel-Lucent, AT&T,
-Bell, Hitachi. Supporting customer cluster systems running Solaris 10,
-Oracle 10g, and Nakina DCI software. Create executable MOPs for
-customers to perform system upgrades and software tuning. Created
-scripts to automate product installs on internal lab systems. Run internal
-product verification on Nakina DCI software.
-
+- Provided Enterprise level support to Tier 1 ISPs.
+- Product Support for Nakina NI-Framework and NI-Controller, including
+  Solaris 10 and Oracle 10g/11g administration.
+- Provided Training to team members for various Nakina Products.
+- Baselined customer systems to ensure they meet required specifications.
+- Created, maintained and tested various MOPs for customer use.
+- Product Verification, UI Testing, Developer API testing in Java / Python.
+- Created automated install scripts to improve efficiency in testing new daily
+  builds of the Nakina Product.
+- Created Solaris scripts to automate creation of zones.
+- Maintained SSH Tunnels to provide access to various offsite equipment for
+  the team.
 
 **Technical Services Specialist**, BOLDstreet Wireless *(Jan 2007 - Dec 2007)*
 ------------------------------------------------------------------------------
@@ -45,9 +55,13 @@ testing.
 **Lead Developer**, FOSSLC *(Feb 2008 - Jan 2015)*
 --------------------------------------------------
 
-Volunteer at the Free and Open Source Software Learning Center. Was the
-Lead Developer for Freeseer video capture software written using Python,
-PyQt4, and GStreamer. Configured laptops for use as recording stations at
-conference events. Filming open source conferences and events to post them on
-the FOSSLC website. Mentor students participating in programs such as
-GSoC, Fedora SoC, UCOSP for the Freeseer project.
+Lead Developer for Freeseer a presentation capture software used by FOSSLC to
+record presentations with a focus of making conference recording cheaper and
+easier. Freeseer is developed using Python, Qt4, and GStreamer.
+
+Mentor students from programs such as GSoC, UCOSP, and Facebook Open Academy
+with work on Freeseer.
+
+Volunteer filming open source related conferences including FSOSS, PGCon,
+BSDCan, SotM2011, FOSS4G2011, FOSS4G2013, EclipseConNA2013,
+EclipseConEurope2012 as well as FOSSLC hosted events.
