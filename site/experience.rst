@@ -29,15 +29,15 @@ Experience
 - Provided Enterprise level support to Tier 1 ISPs.
 - Product Support for Nakina NI-Framework and NI-Controller, including
   Solaris 10 and Oracle 10g/11g administration.
-- Provided Training to team members for various Nakina Products.
+- Provided Nakina product training to team members.
 - Baselined customer systems to ensure they meet required specifications.
-- Created, maintained and tested various MOPs for customer use.
+- Created, maintained and tested Method of Process (MOP) documents
+  for customer use.
 - Product Verification, UI Testing, Developer API testing in Java / Python.
-- Created automated install scripts to improve efficiency in testing new daily
+- Created automated install scripts to improve efficiency in testing new
   builds of the Nakina Product.
 - Created Solaris scripts to automate creation of zones.
-- Maintained SSH Tunnels to provide access to various offsite equipment for
-  the team.
+- Maintained SSH Tunnels to provide access to offsite equipment for the team.
 
 **Technical Services Specialist**, BOLDstreet Wireless *(Jan 2007 - Dec 2007)*
 ------------------------------------------------------------------------------
@@ -57,7 +57,7 @@ testing.
 
 Lead Developer for Freeseer a presentation capture software used by FOSSLC to
 record presentations with a focus of making conference recording cheaper and
-easier. Freeseer is developed using Python, Qt4, and GStreamer.
+easier. Freeseer uses Python, Qt4, and GStreamer.
 
 Mentor students from programs such as GSoC, UCOSP, and Facebook Open Academy
 with work on Freeseer.
