@@ -2,11 +2,11 @@ language: python
 matrix:
   include:
     - python: 3.6
-      env: TOXENV=build
-    - python: 3.6
       env: TOXENV=coala
     - python: 3.6
-      env: TOXENV=linkcheck
+      env: TOXENV=docs
+    - python: 3.6
+      env: TOXENV=docs-linkcheck
 
 sudo: false
 cache: pip
