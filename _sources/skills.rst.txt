@@ -2,6 +2,11 @@
 Technical Skills
 ################
 
+.. sidebar:: Technical Skills
+
+   .. contents::
+      :local:
+
 Software
 ========
 
