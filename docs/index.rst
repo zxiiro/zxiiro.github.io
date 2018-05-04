@@ -8,8 +8,8 @@ to the OpenStreetMap project.
 I received my Bachelor of Information Technology - Network Technology degree
 from Carleton University & Algonquin College in 2009 with distinction.
 
-Resume
-------
+Portfolio
+---------
 
 .. toctree::
 
