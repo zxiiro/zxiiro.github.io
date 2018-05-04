@@ -7,7 +7,7 @@ Technical Writing
 
 I have been writing and maintaining technical documentation for Open Source
 projects since 2008 both as an individual contributor as well as part of a team
-of docs writers. Duties including:
+of docs writers. Duties include:
 
 * Organizing and running docs team meetings
 * Reviewing documentation contributions
@@ -23,6 +23,6 @@ documentation.
 
 I have maintained documentation for Open Source projects such as:
 
-* `Freeseer <https://freeseer.readthedocs.io/`_
+* `Freeseer <https://freeseer.readthedocs.io/>`_
 * `OpenDaylight <http://docs.opendaylight.org>`_
 * `Linux Foundation Release Engineering <http://docs.releng.linuxfoundation.org>`_
