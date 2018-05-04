@@ -13,5 +13,7 @@ from Carleton University & Algonquin College in 2009 with distinction.
    :glob:
 
    experience
+   technical-skills
    presentations
    writings
+   contact
