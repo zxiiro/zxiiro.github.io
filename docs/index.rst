@@ -14,7 +14,7 @@ Portfolio
 .. toctree::
 
    experience
-   technical-skills
+   skills
    presentations
    writings
    contact

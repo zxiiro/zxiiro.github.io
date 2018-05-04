@@ -24,6 +24,14 @@ html_theme_options = {
 
     'bootswatch_theme': "readable",
     'navbar_class': "navbar navbar-inverse",
+    'navbar_links': [
+        ("About", "index"),
+        ("Experience", "experience"),
+        ("Skills", "skills"),
+        ("Presentations", "presentations"),
+        ("Writings", "writings"),
+        ("Contact", "contact"),
+    ],
     'navbar_pagenav': False,
     'navbar_sidebarrel': False,
     'source_link_position': "footer",
