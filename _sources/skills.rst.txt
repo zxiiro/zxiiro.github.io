@@ -2,6 +2,40 @@
 Technical Skills
 ################
 
+Software
+========
+
+Bash
+----
+
+Git
+---
+
+Linux
+-----
+
+Maven
+-----
+
+Nexus Repository
+----------------
+
+Python
+------
+
+
+Release Engineering
+===================
+
+Jenkins
+-------
+
+Jenkins Job Builder
+-------------------
+
+Travis CI
+---------
+
 Technical Writing
 =================
 
