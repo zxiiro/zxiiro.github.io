@@ -22,7 +22,8 @@ html_theme_options = {
     # 'analytics_id': 'UA-46385504-1',
     # 'canonical_url': 'http://www.zxiiro.ca/',
 
-    #'bootswatch_theme': "litera",
+    'bootswatch_theme': "readable",
+    'navbar_class': "navbar navbar-inverse",
     'navbar_pagenav': False,
     'navbar_sidebarrel': False,
     'source_link_position': "footer",
