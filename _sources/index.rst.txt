@@ -1,16 +1,17 @@
-Thanh Ha
-========
+About
+=====
 
-Thanh is an Open Source developer working on the OpenDaylight project,
+I am an Open Source developer working on the OpenDaylight project,
 Release Engineer at the Linux Foundation, and occassional contributor
 to the OpenStreetMap project.
 
-He received his Bachelor of Information Technology - Network Technology degree
+I received my Bachelor of Information Technology - Network Technology degree
 from Carleton University & Algonquin College in 2009 with distinction.
 
+Resume
+------
+
 .. toctree::
-   :hidden:
-   :glob:
 
    experience
    technical-skills
