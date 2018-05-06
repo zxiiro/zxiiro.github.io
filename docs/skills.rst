@@ -12,11 +12,24 @@ Software
 Bash
 ----
 
+Core to my automation toolbox, I write bash scripts to automate builds and
+release management processes.
+
+Gerrit
+------
+
 Git
 ---
 
+Git is my favourite version control system and have been using it extensively
+in Open Source projects since 2008. I am familair with using some of git's more
+advanced features such as bisect, format-patch, submodule, and rebase.
+
 Linux
 -----
+
+Linux is my Operating System of choice and have been using it since 2003, my
+first year in University.
 
 Maven
 -----
@@ -36,6 +49,9 @@ Jenkins
 
 Jenkins Job Builder
 -------------------
+
+I have been a maintainer of the Jenkins Job Builder (JJB) tool since 2015. I
+use this tool in Jenkins based projects to manage job configuration as code.
 
 Travis CI
 ---------
