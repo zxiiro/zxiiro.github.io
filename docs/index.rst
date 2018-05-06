@@ -1,6 +1,10 @@
 About Me
 ========
 
+.. image:: _static/me.jpg
+   :align: right
+   :height: 200px
+
 Thanh Ha is a Release Manager at the Linux Foundation (LF). His focus is
 Release Engineering for the OpenDaylight project. Since 2016 he is a member of
 OpenDaylight's Technical Steering Committee (TSC) where he provides release
