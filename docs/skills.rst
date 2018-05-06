@@ -2,10 +2,9 @@
 Technical Skills
 ################
 
-.. sidebar:: Technical Skills
-
-   .. contents::
-      :local:
+.. contents::
+   :local:
+   :backlinks: none
 
 Software
 ========
