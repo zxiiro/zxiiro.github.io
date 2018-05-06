@@ -1,12 +1,26 @@
 About Me
 ========
 
-I am an Open Source developer working on the OpenDaylight project,
-Release Engineer at the Linux Foundation, and occassional contributor
-to the OpenStreetMap project.
+Thanh Ha is a Release Manager at the Linux Foundation (LF). His focus is
+Release Engineering for the OpenDaylight project. Since 2016 he is a member of
+OpenDaylight's Technical Steering Committee (TSC) where he provides release
+engineering expertise to the project. His area of focus is in build automation
+and tooling to support LF's Continuous Integration (CI) platform.
 
-I received my Bachelor of Information Technology - Network Technology degree
+He received his Bachelor of Information Technology - Network Technology degree
 from Carleton University & Algonquin College in 2009 with distinction.
+
+Outside of work he enjoys hiking in Gatineau park and rollerblading around the
+city.
+
+He is currently working on improving cross project tooling and documentation
+for LF projects.
+
+You can reach him via the following locations:
+
+* Email: thanh.ha@alumni.carleton.ca
+* LinkedIn: https://www.linkedin.com/in/thanhha
+* Twitter: `@zxiiro <https://twitter.com/zxiiro>`_
 
 Portfolio
 ---------
@@ -17,4 +31,3 @@ Portfolio
    skills
    presentations
    writings
-   contact

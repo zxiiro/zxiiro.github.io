@@ -29,7 +29,6 @@ html_theme_options = {
         ("Skills", "skills"),
         ("Presentations", "presentations"),
         ("Writings", "writings"),
-        ("Contact", "contact"),
     ],
     'navbar_pagenav': False,
     'navbar_sidebarrel': False,
