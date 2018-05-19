@@ -34,6 +34,7 @@ html_theme_options = {
     'navbar_sidebarrel': False,
     'source_link_position': "footer",
 }
+html_title = 'Thanh Ha - zxiiro.ca'
 
 # html_sidebars = {
 #     '**': [
