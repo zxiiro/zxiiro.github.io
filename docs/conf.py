@@ -16,6 +16,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 todo_include_todos = False
 
+html_static_path = ['_static']
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
 html_theme_options = {
@@ -35,16 +36,4 @@ html_theme_options = {
     'source_link_position': "footer",
 }
 html_title = 'Thanh Ha - zxiiro.ca'
-
-# html_sidebars = {
-#     '**': [
-#         'about.html',
-#         'navigation.html',
-#         'relations.html',
-#         'searchbox.html',
-#         'donate.html',
-#     ]
-# }
-
-html_static_path = ['_static']
 htmlhelp_basename = 'sitedoc'
