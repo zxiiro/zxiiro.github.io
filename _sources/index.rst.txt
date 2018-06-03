@@ -1,5 +1,5 @@
-About Me
-========
+About
+=====
 
 .. image:: _static/me.jpg
    :align: right
