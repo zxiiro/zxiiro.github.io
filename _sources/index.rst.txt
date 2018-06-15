@@ -1,5 +1,5 @@
-About
-=====
+About Me
+========
 
 .. image:: _static/me.jpg
    :align: right
@@ -34,4 +34,4 @@ Portfolio
    experience
    skills
    presentations
-   writings
+   writings/index
