@@ -34,4 +34,4 @@ Portfolio
    experience
    skills
    presentations
-   writings
+   writings/index

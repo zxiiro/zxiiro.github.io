@@ -29,7 +29,7 @@ html_theme_options = {
         ("Experience", "experience"),
         ("Skills", "skills"),
         ("Presentations", "presentations"),
-        ("Writings", "writings"),
+        ("Writings", "writings/index"),
     ],
     'navbar_pagenav': False,
     'navbar_sidebarrel': False,
