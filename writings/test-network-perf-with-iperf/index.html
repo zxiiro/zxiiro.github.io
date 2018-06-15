@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Share steam library with multiple Linux accounts and systems &#8212; Thanh Ha - zxiiro.ca</title>
+    <title>Test network performance with iperf &#8212; Thanh Ha - zxiiro.ca</title>
     <link rel="stylesheet" href="../../_static/bootstrap-sphinx.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
     <script type="text/javascript" src="../../_static/documentation_options.js"></script>
@@ -17,8 +17,7 @@
     <script type="text/javascript" src="../../_static/bootstrap-sphinx.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Test network performance with iperf" href="../test-network-perf-with-iperf/index.html" />
-    <link rel="prev" title="Writings" href="../index.html" />
+    <link rel="prev" title="Share steam library with multiple Linux accounts and systems" href="../steam-share-library-with-linux/index.html" />
 <meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
 <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
@@ -71,41 +70,33 @@
   <div class="row">
     <div class="col-md-12 content">
       
-  <div class="section" id="share-steam-library-with-multiple-linux-accounts-and-systems">
-<h1>Share steam library with multiple Linux accounts and systems<a class="headerlink" href="#share-steam-library-with-multiple-linux-accounts-and-systems" title="Permalink to this headline">¶</a></h1>
-<p>If you use Steam on Linux one of the annoying things I’ve found is that unlike
-on Windows, Steam for Linux installs to your <code class="docutils literal notranslate"><span class="pre">$HOME</span></code> directory. This means
-every user will have their own Steam installed and what’s more their own games
-installed. So on a shared system you might end up with the same games being
-installed multiple times.</p>
-<p>Steam has a feature that allows you to install games to a alternate location
-called Steam Libraries. This feature allows you to create a Library at a new
-location such as an alternate harddrive or partition if you don’t like where
-Steam installs games by default. We can use this to create a shared library
-location of games. To do this create a new user group on my system called
-<code class="docutils literal notranslate"><span class="pre">steam</span></code> then add all the users on the system which use Steam to this group.</p>
-<p>Then create a shared directory on my system called <code class="docutils literal notranslate"><span class="pre">/steam-library</span></code>, then
-set the permissions to allow reading, writing and executing files from this
-directory to anyone in the steam group.</p>
-<p>Next launch Steam and add <code class="docutils literal notranslate"><span class="pre">/steam-library</span></code> as a new Library in Steam and
-installed games to this location. After installing the games you can tell all
-other users who use Steam on this computer to do the same. If a game they want
-to install is already in the Library, it’ll just appear in their account, no
-unnecessary downloading.</p>
-<div class="figure" id="id1">
-<img alt="../../_images/share-library.png" src="../../_images/share-library.png" />
-<p class="caption"><span class="caption-text">Steam Libraries</span></p>
-</div>
-<div class="section" id="quick-steps">
-<h2>Quick Steps<a class="headerlink" href="#quick-steps" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>mkdir /steam-library
-groupadd steam
-chgrp steam /steam-library
-chmod <span class="m">770</span> /steam-library
-useradd -G steam your_user
-<span class="c1"># add /steam-library to steam on all pc&#39;s and user accounts</span>
+  <div class="section" id="test-network-performance-with-iperf">
+<h1>Test network performance with iperf<a class="headerlink" href="#test-network-performance-with-iperf" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference external" href="https://code.google.com/archive/p/iperf/">iperf</a> is a handy tool to check
+network performance between 2 computers. You can install this tool using your
+distro’s package manager.</p>
+<p>There are 2 modes this tool runs in. Server and Client, you will need to run it
+in server mode on one end and client mode on the other end.</p>
+<p>Server usage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iperf -s
 </pre></div>
 </div>
+<p>Client usage:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iperf -c &lt;host/ip&gt;
+</pre></div>
+</div>
+<p>Basically you want to run it with the <code class="docutils literal notranslate"><span class="pre">-s</span></code> option on the server side and the
+<code class="docutils literal notranslate"><span class="pre">-c</span></code> option on the client side. On the client end you will also need to
+provider the server’s <em>hostname</em> or <em>IP address</em>.</p>
+<p>Here’s an example of what it looks like when run.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>------------------------------------------------------------
+Client connecting to 192.168.32.50, TCP port 5001
+TCP window size: 22.9 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.32.152 port 40885 connected with 192.168.32.50 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   897 MBytes   752 Mbits/sec
+</pre></div>
 </div>
 </div>
 
@@ -123,7 +114,7 @@ useradd -G steam your_user
         <br/>
         
 <div id="sourcelink">
-  <a href="../../_sources/writings/steam-share-library-with-linux/index.rst.txt"
+  <a href="../../_sources/writings/test-network-perf-with-iperf/index.rst.txt"
      rel="nofollow">Source</a>
 </div>
       
