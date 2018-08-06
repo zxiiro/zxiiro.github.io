@@ -5,9 +5,16 @@ Experience
 -------------------------------------------------------------
 
 - Provide software build support to LF projects
-- Manage services such as Jenkins, Gerrit, Nexus, Sonar
-- Develop and deploy tooling used by LF such as Jenkins Job Builder,
-  Python Jenkins, Global JJB, lftools, etc...
+- Manage services including:
+  * Jenkins
+  * Gerrit
+  * Nexus
+  * Sonar
+- Develop and deploy tooling used by LF including:
+  * Jenkins Job Builder (JJB)
+  * Python Jenkins
+  * Global JJB
+  * lftools
 - Project Lead for OpenDaylight releng projects
 - Write and manage documentation for OpenDaylight and Linux Foundation Releng
 
