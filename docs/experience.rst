@@ -60,6 +60,8 @@ Experience
 - Create Solaris scripts to automate creation of zones
 - Maintain SSH Tunnels to provide access to offsite equipment for the team
 
+.. _fosslc:
+
 **Lead Developer**, FOSSLC *(Feb 2008 - Jan 2015)*
 --------------------------------------------------
 

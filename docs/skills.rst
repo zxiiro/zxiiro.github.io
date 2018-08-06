@@ -40,6 +40,9 @@ Nexus Repository
 Python
 ------
 
+I have been writing software with Python since 2008. Initially for the Freeseer
+project while I was volunteering my time at :ref:`FOSSLC <fosslc>`.
+
 
 Release Engineering
 ===================
