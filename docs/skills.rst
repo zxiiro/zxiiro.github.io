@@ -50,8 +50,9 @@ Jenkins
 Jenkins Job Builder
 -------------------
 
-I have been a maintainer of the Jenkins Job Builder (JJB) tool since 2015. I
-use this tool in Jenkins based projects to manage job configuration as code.
+I am an active maintainer of the Jenkins Job Builder (JJB) tool since 2015. I
+deploy this tool in all projects that use Jenkins CI to manage job
+configuration as code.
 
 Travis CI
 ---------
