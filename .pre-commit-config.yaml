@@ -15,3 +15,4 @@ repos:
       - id: proselint
         types:
           - rst
+        exclude: docs/writings/index.rst
