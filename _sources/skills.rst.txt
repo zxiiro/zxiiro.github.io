@@ -18,6 +18,11 @@ release management processes.
 Gerrit
 ------
 
+I have been using Gerrit since 2008 for many Open Source projects. I also
+manage several Gerrit servers for several Open Source communities. Gerrit is a
+great tool for a code review first workflow to ensure developers review code
+before merging the work into the production system.
+
 Git
 ---
 
@@ -40,6 +45,9 @@ Nexus Repository
 Python
 ------
 
+I have been writing software with Python since 2008. Initially for the Freeseer
+project while I was volunteering my time at :ref:`FOSSLC <fosslc>`.
+
 
 Release Engineering
 ===================
@@ -50,8 +58,9 @@ Jenkins
 Jenkins Job Builder
 -------------------
 
-I have been a maintainer of the Jenkins Job Builder (JJB) tool since 2015. I
-use this tool in Jenkins based projects to manage job configuration as code.
+I am an active maintainer of the Jenkins Job Builder (JJB) tool since 2015. I
+deploy this tool in all projects that use Jenkins CI to manage job
+configuration as code.
 
 Travis CI
 ---------
