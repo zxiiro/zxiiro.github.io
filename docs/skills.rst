@@ -18,6 +18,11 @@ release management processes.
 Gerrit
 ------
 
+I have been using Gerrit since 2008 for many Open Source projects. I also
+manage several Gerrit servers for several Open Source communities. Gerrit is a
+great tool for a code review first workflow to ensure developers review code
+before merging the work into the production system.
+
 Git
 ---
 
