@@ -26,6 +26,7 @@ html_theme_options = {
     'bootswatch_theme': "readable",
     'navbar_class': "navbar navbar-inverse",
     'navbar_links': [
+        ("Resume", "https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing"),
         ("Experience", "experience"),
         ("Skills", "skills"),
         ("Presentations", "presentations"),
