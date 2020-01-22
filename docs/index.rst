@@ -5,20 +5,16 @@ About
    :align: right
    :height: 200px
 
-Thanh Ha is a Release Manager at the Linux Foundation (LF). His focus is
-Release Engineering for the OpenDaylight project. Since 2016 he is a member of
-OpenDaylight's Technical Steering Committee (TSC) where he provides release
-engineering expertise to the project. His area of focus is in build automation
-and tooling to support LF's Continuous Integration (CI) platform.
+Thanh Ha is a DevOps Engineer at the Lumina Networks. Since 2014 he has
+participated in the OpenDaylight project providing release engineering
+expertise to the project. His area of focus is in build automation and tooling
+to support OpenDaylight's Continuous Integration (CI) platform.
 
 He received his Bachelor of Information Technology - Network Technology degree
 from Carleton University & Algonquin College in 2009 with distinction.
 
 Outside of work he enjoys hiking in Gatineau park and rollerblading around the
 city.
-
-He is currently working on improving cross project tooling and documentation
-for LF projects.
 
 You can reach him via the following locations:
 
