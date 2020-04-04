@@ -1,10 +1,40 @@
 Experience
 ==========
 
-**Release Manager**, Linux Foundation *(Sept 2014 - Present)*
--------------------------------------------------------------
+**DevOps Engineer**, Lumina Networks *(Apr 2019 - Present)*
+-----------------------------------------------------------
 
-- Provide software build support to LF projects
+- Automate internal release processes
+- Develop tooling to improve CI workflows and management
+- Manage CI services:
+
+  * Jenkins
+  * BitBucket
+  * GitHub
+  * Artifactory
+  * Blackduck
+
+- Manage communications platforms:
+
+  * JIRA
+  * Confluence
+
+- Provide CI support for internal developers
+- Write and manage documentation for internal CI infrastructure
+- Participate in upstream Open Source projects such as:
+
+  * OpenDaylight
+  * Linux Foundation Releng Tooling
+  * Jenkins Job Builder
+
+**Release Manager**, Linux Foundation *(Sept 2014 - Mar 2019)*
+--------------------------------------------------------------
+
+- Provide software build support to LF projects, notably:
+
+  * OpenDaylight
+  * Academy Software Foundation
+
 - Manage services including:
 
   * Jenkins
@@ -22,8 +52,8 @@ Experience
 - Project Lead for OpenDaylight releng projects
 - Write and manage documentation for OpenDaylight and Linux Foundation Releng
 
-**Technical Steering Committee Member**, OpenDaylight *(Nov 2016 - Present)*
-----------------------------------------------------------------------------
+**Technical Steering Committee Member**, OpenDaylight *(Nov 2016 - Oct 2019)*
+-----------------------------------------------------------------------------
 
 - Participate in technical discussions related to the OpenDaylight project
 - Provide release engineering expertise to the TSC members
