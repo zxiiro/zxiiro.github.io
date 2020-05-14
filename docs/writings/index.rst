@@ -3,10 +3,10 @@ Writings
 ########
 
 .. toctree::
-   :maxdepth: 1
+    :maxdepth: 1
 
-   steam-share-library-with-linux/index
-   test-network-perf-with-iperf/index
+    steam-share-library-with-linux/index
+    test-network-perf-with-iperf/index
 
 .. * Speed up "git status" in a repo with submodules
 
