@@ -1,8 +1,8 @@
 import sphinx_bootstrap_theme
 
 author = 'Thanh Ha'
-copyright = '2018, Thanh Ha'
-project = u'Thanh Ha'
+copyright = '2020, Thanh Ha'
+project = 'Thanh Ha'
 version = '3.0'
 release = version
 
