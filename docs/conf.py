@@ -36,7 +36,7 @@ html_theme_options = {
     ],
     'navbar_pagenav': False,
     'navbar_sidebarrel': False,
-    'source_link_position': "footer",
+    'source_link_position': "none",
 }
 html_title = 'Thanh Ha - zxiiro.ca'
 htmlhelp_basename = 'sitedoc'
