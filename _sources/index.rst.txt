@@ -26,8 +26,9 @@ Portfolio
 ---------
 
 .. toctree::
+    :maxdepth: 2
 
-   experience
-   skills
-   presentations
-   writings/index
+    experience
+    skills
+    presentations
+    writings/index
