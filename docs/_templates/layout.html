@@ -1,18 +1,16 @@
 {% extends "!layout.html" %}
 
-{% block footer %}
-  {{ super() }}
+{% block extrahead %}
+    <!-- Google AdSense -->
+    <script data-ad-client="ca-pub-8372191724800927" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
-  <!-- Google AdSense -->
-  <script data-ad-client="ca-pub-8372191724800927" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46385504-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46385504-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-46385504-1');
-  </script>
+      gtag('config', 'UA-46385504-1');
+    </script>
 {% endblock %}
