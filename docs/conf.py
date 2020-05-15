@@ -6,7 +6,10 @@ project = 'Thanh Ha'
 version = '3.0'
 release = version
 
-extensions = []
+extensions = [
+    'sphinx.ext.githubpages',
+]
+
 language = None
 master_doc = 'index'
 source_suffix = '.rst'
@@ -16,6 +19,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 pygments_style = 'sphinx'
 todo_include_todos = False
 
+html_baseurl = 'https://www.zxiiro.ca'
 html_static_path = ['_static']
 html_theme = 'bootstrap'
 html_theme_path = sphinx_bootstrap_theme.get_html_theme_path()
