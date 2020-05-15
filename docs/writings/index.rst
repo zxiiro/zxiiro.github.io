@@ -5,6 +5,7 @@ Writings
 .. toctree::
     :maxdepth: 1
 
+    writing-a-great-commit-message/index
     steam-share-library-with-linux/index
     test-network-perf-with-iperf/index
 
