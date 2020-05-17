@@ -24,6 +24,7 @@ interests:
 - Open Source
 - Build Automation
 - DevOps
+- Technical Writing systems
 
 education:
   courses:
