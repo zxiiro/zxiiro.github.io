@@ -107,7 +107,7 @@ appointment_url = ""
 contact_links = [
   {icon = "twitter", icon_pack = "fab", name = "@zxiiro", link = "https://twitter.com/zxiiro"},
   {icon = "github", icon_pack = "fab", name = "zxiiro", link = "https://github.com/zxiiro"},
-  {icon = "file", icon_pack = "fas", name = "Resume", link = "https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing"},
+  {icon = "file-alt", icon_pack = "fas", name = "Resume", link = "https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing"},
   # {icon = "skype", icon_pack = "fab", name = "Skype Me", link = ""},
   # {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = ""},
   # {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = ""},
