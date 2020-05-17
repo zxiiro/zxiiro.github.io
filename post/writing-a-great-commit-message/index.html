@@ -1,0 +1,1282 @@
+<!DOCTYPE html><html lang="en-us" >
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.8.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Thanh Ha">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="An often overlooked part of Git is the commit message. The usefulness of many of Git&rsquo;s features rely on well structured commit messages.
+A commit message structure:
+Subject line in 50 chars or less Following a blank line after the subject line is the commit message body, containing a more detailed explaination of the change.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://www.zxiiro.ca/post/writing-a-great-commit-message/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-1/css/all.min.css" integrity="sha256-4w9DunooKSr3MFXHXWyFER38WmPdm361bQS/2KUWZbU=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+        
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-46385504-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'UA-46385504-1', {});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+  
+
+
+  
+  
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="https://www.zxiiro.ca/post/writing-a-great-commit-message/">
+
+  
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@zxiiro">
+  <meta property="twitter:creator" content="@zxiiro">
+  
+  <meta property="og:site_name" content="zxiiro">
+  <meta property="og:url" content="https://www.zxiiro.ca/post/writing-a-great-commit-message/">
+  <meta property="og:title" content="Writing a Great Commit Message | zxiiro">
+  <meta property="og:description" content="An often overlooked part of Git is the commit message. The usefulness of many of Git&rsquo;s features rely on well structured commit messages.
+A commit message structure:
+Subject line in 50 chars or less Following a blank line after the subject line is the commit message body, containing a more detailed explaination of the change."><meta property="og:image" content="https://www.zxiiro.ca/img/me">
+  <meta property="twitter:image" content="https://www.zxiiro.ca/img/me"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2020-05-15T12:27:36-04:00">
+    
+    <meta property="article:modified_time" content="2020-05-17T12:33:55-04:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://www.zxiiro.ca/post/writing-a-great-commit-message/"
+  },
+  "headline": "Writing a Great Commit Message",
+  
+  "datePublished": "2020-05-15T12:27:36-04:00",
+  "dateModified": "2020-05-17T12:33:55-04:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Thanh Ha"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "zxiiro",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.zxiiro.ca/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png"
+    }
+  },
+  "description": "An often overlooked part of Git is the commit message. The usefulness of many of Git\u0026rsquo;s features rely on well structured commit messages.\nA commit message structure:\nSubject line in 50 chars or less Following a blank line after the subject line is the commit message body, containing a more detailed explaination of the change."
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Writing a Great Commit Message | zxiiro</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">zxiiro</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">zxiiro</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#experience"><span>Experience</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Posts</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#talks"><span>Presentations</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item dropdown theme-dropdown">
+        <a href="#" class="nav-link js-theme-selector" data-toggle="dropdown" aria-haspopup="true">
+          <i class="fas fa-palette" aria-hidden="true"></i>
+        </a>
+        <div class="dropdown-menu">
+          <a href="#" class="dropdown-item js-set-theme-light">
+            <span>Light</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-dark">
+            <span>Dark</span>
+          </a>
+          <a href="#" class="dropdown-item js-set-theme-auto">
+            <span>Automatic</span>
+          </a>
+        </div>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1>Writing a Great Commit Message</h1>
+
+  
+
+  
+    
+
+
+<div class="article-metadata">
+
+  
+  
+  
+  
+  <div>
+    
+
+  
+  <span><a href="/author/thanh-ha/">Thanh Ha</a></span>
+  </div>
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+          Last updated on
+      
+    
+    2020-05-17
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    7 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <p>An often overlooked part of Git is the commit message. The usefulness of many
+of Git&rsquo;s features rely on well structured commit messages.</p>
+<p>A commit message structure:</p>
+<pre><code>Subject line in 50 chars or less
+
+Following a blank line after the subject line is the commit message
+body, containing a more detailed explaination of the change.
+This should be word-wrapped at 72 characters.
+
+The body can consist of as many lines as necessary to fully
+explain in detail why the change is necessary. You should
+explain the problem that this commit is solving and focus on
+why this change is necessary rather than explaining the &quot;how&quot;
+(the reviewer can review the code for that detail).
+
+Include any side effects and consequences of the change.
+
+Many CLI based tools such as `git log`, `git shortlog`,
+`git rebase`, are significantly more useful when the commit
+messages follow these best practices.
+
+Finally the last &quot;block&quot; (a section without further blank lines
+following it) is for metadata such as sign-offs, references, and
+issue numbers.
+
+Issue: #123
+See-also: #456
+Ref: https://example.com/relevant-article-or-link
+Co-authored-by: Firstname Lastname &lt;email&gt;
+Signed-off-by: Firstname Lastname &lt;email&gt;
+</code></pre>
+<p>We will break down the major sections below.</p>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<p><ins class="adsbygoogle"
+style="display:block; text-align:center;"
+data-ad-layout="in-article"
+data-ad-format="fluid"
+data-ad-client="ca-pub-8372191724800927"
+data-ad-slot="2013710351"></ins></p>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+<h2 id="the-subject-line">The subject line</h2>
+<p>The subject line should be short and sweet, providing enough detail for the
+reader to immediately have a decent idea about what the commit is about.</p>
+<p>From the <code>git commit</code> manpage:</p>
+<pre><code>Though not required, it’s a good idea to begin the commit message with a
+single short (less than 50 character) line summarizing the change,
+followed by a blank line and then a more thorough description. The text up
+to the first blank line in a commit message is treated as the commit
+title, and that title is used throughout Git. For example,
+Git-format-patch(1) turns a commit into email, and it uses the title on
+the Subject line and the rest of the commit in the body.
+</code></pre>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Keep the subject line short (50 characters)</li>
+<li>The first letter of the subject line should be capitalized</li>
+<li>The subject line should not end with any punctuation</li>
+<li>The subject line should be written in imperative mood</li>
+<li>Immediately following subject line is a blank line</li>
+<li>Descriptive enough that one can get the gist of the change</li>
+</ul>
+<p><strong>Good examples:</strong></p>
+<span style="color:green">
+  <ul>
+    <li>Allow pyyaml >= 5</li>
+    <li>Bump version to 2.0.0-SNAPSHOT</li>
+    <li>Fix double inderection of name templates</li>
+    <li>Add Private and WIP change support for Gerrit</li>
+  </ul>
+</span>
+<p><strong>Bad examples:</strong></p>
+<span style="color:red">
+  <ul>
+    <li>Fix build issue</li>
+    <li>Fixes delete-all command when no option is provided.</li>
+    <li>Adding view for the Delivery Pipeline Plugin</li>
+    <li>test non-default value of attach-build-log</li>
+  </ul>
+</span>
+<h2 id="the-commit-body">The commit body</h2>
+<p>Following a blank line after the subject line, the commit body is where you
+can explain your change in full details.</p>
+<p><strong>Best practices:</strong></p>
+<ul>
+<li>Keep lines under 72 characters</li>
+<li>Explain what and why instead of how</li>
+</ul>
+<p>Git as well many tools that parse Git commits do not automatically wrap text
+so you must manually do this yourself. Keeping the limit to 72 characters is
+good practice to allow for Git to do indentation and still be under 80
+characters total.</p>
+<p>Put yourself in the shoes of the reviewer of the change. If someone proposed
+this change to you, what information would you like to know about it before
+you will approve the change?</p>
+<p>Reviewers can look at the diff to see what exactly was changed so focus on
+telling the reviewer why they should accept your change. You are essentially
+writing a project proposal here so provide as much detail as possible.</p>
+<p>If you are fixing code or a test, include details on how to reproduce the
+problem so that the reviewer doesn&rsquo;t have to reach out to you for further
+details on how to retest.</p>
+<p><strong>Good example A:</strong></p>
+<pre><code>Fix the yaml load warning
+
+In the new version of PyYAML the API changed to be more explicit. Now
+the default value for the Loader is None, see:
+
+https://github.com/yaml/pyyaml/blob/5.1/lib3/yaml/__init__.py#L103
+
+The load is unsafe. It's better to use safe_load function.
+
+Change-Id: Ia1cd16f2ff970ca220a266c99b6554dd4254ebd9
+</code></pre>
+<p><strong>Good example B:</strong></p>
+<pre><code>Add 'secret-token' parameter to gitlab trigger
+
+This adds support for the job specific secret token in the
+gitlab build trigger.
+
+This feature was added to the &quot;Gitlab Plugin&quot; with version 1.4.1
+(released Sep 24, 2016).
+Excerpt from the changelog:
+ &quot;Add possiblity to configure secret tokens per job to allow
+ only web hooks with the correct token to trigger builds.&quot;
+
+Change-Id: Id1ede4a6a51a231f60a39bfaefbadd8f849076e4
+</code></pre>
+<h2 id="commit-message-trailer">Commit message trailer</h2>
+<p>The final block of a commit message is for trailers. Similar to email it is
+where you sign off on your message as well as include other useful metadata.
+Typically for references to issues or links to pages for additional
+information.</p>
+<p><strong>Best Practices:</strong></p>
+<ul>
+<li>Use the form <code>Key: Value</code> when entering trailers</li>
+<li>Make sure the last block has no blank lines in between entries</li>
+<li>If there is a relevant issue, refer to it here</li>
+<li>Give credit via <code>Co-authored-by</code> to other folks who worked on this commit</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre><code>Issue: ABC-123
+Ref: https://example.com/blog-about-issue
+Change-Id: Iaa40ef0377409e08e6efd41aa967249f9d3c4xyz
+Co-authored-by: Bob &lt;bob@example.com&gt;
+Signed-off-by: Tim &lt;tim@example.com&gt;
+</code></pre>
+<p><strong>Signed-off-by</strong></p>
+<p>In some open source projects folks leave a
+<code>Signed-off-by: Firstname Lastname &lt;someone@example.com&gt;</code>.</p>
+<p>This can be added automatically via the <code>git commit -s</code> command, it&rsquo;s a
+convenience parameter but you can also type it in by hand when writing your
+commit message.</p>
+<p>Signed-off-by doesn&rsquo;t really mean much in most projects but some open source
+projects use it as a way of indicating that you have signed off on an
+official document such as a <strong>Contributor License Agreement (CLA)</strong> or a
+<strong>Developer Certificate of Origin</strong>.</p>
+<p>Reference: <a href="https://developercertificate.org/">https://developercertificate.org/</a></p>
+<pre><code>Developer Certificate of Origin
+Version 1.1
+
+Copyright (C) 2004, 2006 The Linux Foundation and its contributors.
+1 Letterman Drive
+Suite D4700
+San Francisco, CA, 94129
+
+Everyone is permitted to copy and distribute verbatim copies of this
+license document, but changing it is not allowed.
+
+
+Developer's Certificate of Origin 1.1
+
+By making a contribution to this project, I certify that:
+
+(a) The contribution was created in whole or in part by me and I
+    have the right to submit it under the open source license
+    indicated in the file; or
+
+(b) The contribution is based upon previous work that, to the best
+    of my knowledge, is covered under an appropriate open source
+    license and I have the right under that license to submit that
+    work with modifications, whether created in whole or in part
+    by me, under the same open source license (unless I am
+    permitted to submit under a different license), as indicated
+    in the file; or
+
+(c) The contribution was provided directly to me by some other
+    person who certified (a), (b) or (c) and I have not modified
+    it.
+
+(d) I understand and agree that this project and the contribution
+    are public and that a record of the contribution (including all
+    personal information I submit with it, including my sign-off) is
+    maintained indefinitely and may be redistributed consistent with
+    this project or the open source license(s) involved.
+</code></pre>
+<p>Be mindful about the sign-off rules on the projects you are contributing to
+and make sure you understand what the sign-off means in case the project you
+are contributing to has a document similar to this.</p>
+<p>Refer to the manpage for <code>git-interpret-trailers</code> for more details on
+trailers.</p>
+<h2 id="final-tips-on-commit-messages">Final tips on commit messages</h2>
+<ul>
+<li>
+<p><strong>Resist the urge to use</strong> <code>git commit -m 'My commit message'</code></p>
+<p>While it may seem handy, it promotes a bad habit of writing unthoughtful
+commit messages. By editing your commit message in a full editor you will
+spend more time thinking about your commit message, often producing higher
+quality messages.</p>
+</li>
+<li>
+<p><strong>Spend time reviewing code yourself</strong></p>
+<p>If you are actively participating in a project, spend some time reviewing
+code on that project even if you are not a maintainer or committer on the
+project. This is the best way for you to quickly learn the best practices of
+not only the project but also what we discussed here as it is easier to
+understand the hardships of a code reviewer if you are one yourself.</p>
+</li>
+</ul>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tag/git/">Git</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://www.zxiiro.ca/post/writing-a-great-commit-message/&amp;text=Writing%20a%20Great%20Commit%20Message" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://www.zxiiro.ca/post/writing-a-great-commit-message/&amp;t=Writing%20a%20Great%20Commit%20Message" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Writing%20a%20Great%20Commit%20Message&amp;body=https://www.zxiiro.ca/post/writing-a-great-commit-message/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://www.zxiiro.ca/post/writing-a-great-commit-message/&amp;title=Writing%20a%20Great%20Commit%20Message" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Writing%20a%20Great%20Commit%20Message%20https://www.zxiiro.ca/post/writing-a-great-commit-message/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://www.zxiiro.ca/post/writing-a-great-commit-message/&amp;title=Writing%20a%20Great%20Commit%20Message" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+    
+      
+    
+    
+    
+    <div class="media author-card content-widget-hr">
+      
+        
+        <img class="avatar mr-3 avatar-circle" src="/author/thanh-ha/avatar_hube9db87640b3e835c7a7b496b3e63762_31165_270x270_fill_q90_lanczos_center.jpg" alt="Thanh Ha">
+      
+
+      <div class="media-body">
+        <h5 class="card-title"><a href="https://www.zxiiro.ca/">Thanh Ha</a></h5>
+        <h6 class="card-subtitle">DevOps Engineer</h6>
+        <p class="card-text">Open Source Developer focusing in build automation and tooling to support OpenDaylight’s Continuous Integration platform.</p>
+        <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="/#contact" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://twitter.com/zxiiro" target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/zxiiro" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing" target="_blank" rel="noopener">
+        <i class="ai ai-cv"></i>
+      </a>
+    </li>
+  
+</ul>
+
+      </div>
+    </div>
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <div class="article-widget content-widget-hr">
+    <h3>Related</h3>
+    <ul>
+      
+      <li><a href="/talk/wtf-is-git-rebase/">WTF is Git Rebase</a></li>
+      
+    </ul>
+  </div>
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/highlight.min.js" integrity="sha256-eOgo0OtLL4cdq7RdwRUiGKLX9XsIJ7nGhWEKbohmVAQ=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    <script>const isSiteThemeDark = false;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.37431be2d92d7fb0160054761ab79602.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    Copyright © 2020 Thanh Ha
+  </p>
+
+  
+  
+
+
+
+
+
+
+  <p class="powered-by">
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

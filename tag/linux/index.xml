@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux | zxiiro</title>
+    <link>https://www.zxiiro.ca/tag/linux/</link>
+      <atom:link href="https://www.zxiiro.ca/tag/linux/index.xml" rel="self" type="application/rss+xml" />
+    <description>Linux</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Tue, 29 Oct 2013 00:00:00 -0400</lastBuildDate>
+    <image>
+      <url>https://www.zxiiro.ca/img/me</url>
+      <title>Linux</title>
+      <link>https://www.zxiiro.ca/tag/linux/</link>
+    </image>
+    
+    <item>
+      <title>Testing network performance with iperf</title>
+      <link>https://www.zxiiro.ca/post/test-network-with-iperf/</link>
+      <pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/post/test-network-with-iperf/</guid>
+      <description>&lt;p&gt;
+&lt;a href=&#34;https://code.google.com/archive/p/iperf/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iperf&lt;/a&gt; is a handy tool to check
+network performance between 2 computers. You can install this tool using your
+distro’s package manager.&lt;/p&gt;
+&lt;p&gt;There are 2 modes this tool runs in. Server and Client, you will need to run it
+in server mode on one end and client mode on the other end.&lt;/p&gt;
+&lt;script async src=&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;ins class=&#34;adsbygoogle&#34;
+style=&#34;display:block; text-align:center;&#34;
+data-ad-layout=&#34;in-article&#34;
+data-ad-format=&#34;fluid&#34;
+data-ad-client=&#34;ca-pub-8372191724800927&#34;
+data-ad-slot=&#34;2013710351&#34;&gt;&lt;/ins&gt;&lt;/p&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;p&gt;&lt;strong&gt;Server usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;iperf -s
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;strong&gt;Client usage:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;iperf -c &amp;lt;host/ip&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Basically you want to run it with the &lt;code&gt;-s&lt;/code&gt; option on the server side and the
+&lt;code&gt;-c&lt;/code&gt; option on the client side. On the client end you will also need to
+provider the server&amp;rsquo;s &lt;em&gt;hostname&lt;/em&gt; or &lt;em&gt;IP address&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s an example of what it looks like when run.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;------------------------------------------------------------
+Client connecting to 192.168.32.50, TCP port 5001
+TCP window size: 22.9 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.32.152 port 40885 connected with 192.168.32.50 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   897 MBytes   752 Mbits/sec
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Steam Share Library With Linux</title>
+      <link>https://www.zxiiro.ca/post/steam-share-library-with-linux/</link>
+      <pubDate>Sun, 27 Oct 2013 04:00:00 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/post/steam-share-library-with-linux/</guid>
+      <description>&lt;p&gt;If you use Steam on Linux one of the annoying things I’ve found is that unlike
+on Windows, Steam for Linux installs to your &lt;code&gt;$HOME&lt;/code&gt; directory. This means
+every user will have their own Steam installed and what’s more their own games
+installed. So on a shared system you might end up with the same games being
+installed multiple times.&lt;/p&gt;
+&lt;script async src=&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
+&lt;p&gt;&lt;ins class=&#34;adsbygoogle&#34;
+style=&#34;display:block; text-align:center;&#34;
+data-ad-layout=&#34;in-article&#34;
+data-ad-format=&#34;fluid&#34;
+data-ad-client=&#34;ca-pub-8372191724800927&#34;
+data-ad-slot=&#34;2013710351&#34;&gt;&lt;/ins&gt;&lt;/p&gt;
+&lt;script&gt;
+     (adsbygoogle = window.adsbygoogle || []).push({});
+&lt;/script&gt;
+&lt;p&gt;Steam has a feature that allows you to install games to a alternate location
+called Steam Libraries. This feature allows you to create a Library at a new
+location such as an alternate harddrive or partition if you don’t like where
+Steam installs games by default. We can use this to create a shared library
+location of games. To do this create a new user group on my system called
+&lt;code&gt;steam&lt;/code&gt; then add all the users on the system which use Steam to this group.&lt;/p&gt;
+&lt;p&gt;Then create a shared directory on my system called &lt;code&gt;/steam-library&lt;/code&gt;, then
+set the permissions to allow reading, writing and executing files from this
+directory to anyone in the steam group.&lt;/p&gt;
+&lt;p&gt;Next launch Steam and add &lt;code&gt;/steam-library&lt;/code&gt; as a new Library in Steam and
+installed games to this location. After installing the games you can tell all
+other users who use Steam on this computer to do the same. If a game they want
+to install is already in the Library, it’ll just appear in their account, no
+unnecessary downloading.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://www.zxiiro.ca/img/steam-share-library.png&#34; alt=&#34;Steam Libraries&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;quick-steps&#34;&gt;Quick Steps&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;mkdir /steam-library
+groupadd steam
+chgrp steam /steam-library
+chmod 770 /steam-library
+useradd -G steam your_user
+# add /steam-library to steam on all pc&#39;s and user accounts
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

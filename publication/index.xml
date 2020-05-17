@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications | zxiiro</title>
+    <link>https://www.zxiiro.ca/publication/</link>
+      <atom:link href="https://www.zxiiro.ca/publication/index.xml" rel="self" type="application/rss+xml" />
+    <description>Publications</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright>
+    <image>
+      <url>https://www.zxiiro.ca/img/me</url>
+      <title>Publications</title>
+      <link>https://www.zxiiro.ca/publication/</link>
+    </image>
+    
+    <item>
+      <title>Contribute to Eclipse Projects via Gerrit</title>
+      <link>https://www.zxiiro.ca/publication/contribute-to-eclipse-projects-via-gerrit/</link>
+      <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/publication/contribute-to-eclipse-projects-via-gerrit/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.eclipse.org/community/eclipse_newsletter/2014/july/article3.php&#34;&gt;https://www.eclipse.org/community/eclipse_newsletter/2014/july/article3.php&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Eclipse CBI</title>
+      <link>https://www.zxiiro.ca/publication/eclipse-cbi/</link>
+      <pubDate>Thu, 01 Aug 2013 00:00:00 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/publication/eclipse-cbi/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php&#34;&gt;https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
