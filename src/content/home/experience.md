@@ -7,10 +7,14 @@ weight = 40  # Order that this section will appear.
 
 title = "Experience"
 subtitle = """
+<a href="https://www.linkedin.com/in/thanhha/"
+   target="_blank">
+   <i class="fab fa-linkedin"></i>
+</a>
 <a href="https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing"
    target="_blank">
-   <i class="far fa-file-alt"></i> Resume
- </a>
+   <i class="far fa-file-alt"></i>
+</a>
 """
 
 # Date format for experience

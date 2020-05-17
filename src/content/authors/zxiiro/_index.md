@@ -41,13 +41,16 @@ education:
 social:
 - icon: envelope
   icon_pack: fas
-  link: '#contact'  # For a direct email link, use "mailto:test@example.org".
+  link: '#contact'
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/zxiiro
 - icon: github
   icon_pack: fab
   link: https://github.com/zxiiro
+- icon: linkedin
+  icon_pack: fab
+  link: 'https://www.linkedin.com/in/thanhha/'
 - icon: cv
   icon_pack: ai
   link: https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing
