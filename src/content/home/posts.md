@@ -9,7 +9,7 @@ weight = 60  # Order that this section will appear.
 
 title = "Posts"
 subtitle = """
-<a href="/blog">
+<a href="/post">
   <i class="fas fa-blog"></i>
 </a>
 <a href="/tags">

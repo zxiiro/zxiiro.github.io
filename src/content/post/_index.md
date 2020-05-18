@@ -11,7 +11,4 @@ view: 2
 header:
   caption: ""
   image: ""
-
-aliases:
-- "/blog/"
 ---
