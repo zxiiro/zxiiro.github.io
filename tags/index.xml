@@ -1,52 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on zxiiro</title>
+    <title>Tags | zxiiro</title>
     <link>https://www.zxiiro.ca/tags/</link>
-    <description>Recent content in Tags on zxiiro</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>Copyright © {year} Thanh Ha</copyright>
-    <lastBuildDate>Fri, 15 May 2020 12:27:36 -0400</lastBuildDate>
-    
-	<atom:link href="https://www.zxiiro.ca/tags/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Git</title>
-      <link>https://www.zxiiro.ca/tag/git/</link>
-      <pubDate>Fri, 15 May 2020 12:27:36 -0400</pubDate>
-      
-      <guid>https://www.zxiiro.ca/tag/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Eclipse</title>
-      <link>https://www.zxiiro.ca/tag/eclipse/</link>
-      <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
-      
-      <guid>https://www.zxiiro.ca/tag/eclipse/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Linux</title>
-      <link>https://www.zxiiro.ca/tag/linux/</link>
-      <pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate>
-      
-      <guid>https://www.zxiiro.ca/tag/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Steam</title>
-      <link>https://www.zxiiro.ca/tag/steam/</link>
-      <pubDate>Sun, 27 Oct 2013 04:00:00 -0400</pubDate>
-      
-      <guid>https://www.zxiiro.ca/tag/steam/</guid>
-      <description></description>
-    </item>
+      <atom:link href="https://www.zxiiro.ca/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Fri, 15 May 2020 12:27:36 -0400</lastBuildDate>
+    <image>
+      <url>https://www.zxiiro.ca/img/me</url>
+      <title>Tags</title>
+      <link>https://www.zxiiro.ca/tags/</link>
+    </image>
     
   </channel>
 </rss>
