@@ -1,16 +1,25 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors | zxiiro</title>
+    <title>Authors on zxiiro</title>
     <link>https://www.zxiiro.ca/authors/</link>
-      <atom:link href="https://www.zxiiro.ca/authors/index.xml" rel="self" type="application/rss+xml" />
-    <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Fri, 15 May 2020 12:27:36 -0400</lastBuildDate>
-    <image>
-      <url>https://www.zxiiro.ca/img/me</url>
-      <title>Authors</title>
-      <link>https://www.zxiiro.ca/authors/</link>
-    </image>
+    <description>Recent content in Authors on zxiiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © {year} Thanh Ha</copyright>
+    <lastBuildDate>Fri, 15 May 2020 12:27:36 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.zxiiro.ca/authors/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Thanh Ha</title>
+      <link>https://www.zxiiro.ca/author/thanh-ha/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.zxiiro.ca/author/thanh-ha/</guid>
+      <description>Thanh Ha is a DevOps Engineer at the Lumina Networks. Since 2014 he has participated in the OpenDaylight project providing release engineering expertise to the project. His area of focus is in build automation and tooling to support OpenDaylight’s Continuous Integration (CI) platform.</description>
+    </item>
     
   </channel>
 </rss>

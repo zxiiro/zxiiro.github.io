@@ -1,42 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Eclipse | zxiiro</title>
+    <title>Eclipse on zxiiro</title>
     <link>https://www.zxiiro.ca/tag/eclipse/</link>
-      <atom:link href="https://www.zxiiro.ca/tag/eclipse/index.xml" rel="self" type="application/rss+xml" />
-    <description>Eclipse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Tue, 01 Jul 2014 00:00:00 -0400</lastBuildDate>
-    <image>
-      <url>https://www.zxiiro.ca/img/me</url>
-      <title>Eclipse</title>
-      <link>https://www.zxiiro.ca/tag/eclipse/</link>
-    </image>
+    <description>Recent content in Eclipse on zxiiro</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © {year} Thanh Ha</copyright>
+    <lastBuildDate>Tue, 01 Jul 2014 00:00:00 -0400</lastBuildDate>
+    
+	<atom:link href="https://www.zxiiro.ca/tag/eclipse/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Contribute to Eclipse Projects via Gerrit</title>
       <link>https://www.zxiiro.ca/publication/contribute-to-eclipse-projects-via-gerrit/</link>
       <pubDate>Tue, 01 Jul 2014 00:00:00 -0400</pubDate>
+      
       <guid>https://www.zxiiro.ca/publication/contribute-to-eclipse-projects-via-gerrit/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.eclipse.org/community/eclipse_newsletter/2014/july/article3.php&#34;&gt;https://www.eclipse.org/community/eclipse_newsletter/2014/july/article3.php&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>https://www.eclipse.org/community/eclipse_newsletter/2014/july/article3.php</description>
     </item>
     
     <item>
       <title>Fork the Ide</title>
       <link>https://www.zxiiro.ca/talk/fork-the-ide/</link>
       <pubDate>Sat, 17 May 2014 11:57:10 -0400</pubDate>
+      
       <guid>https://www.zxiiro.ca/talk/fork-the-ide/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.zxiiro.ca/presentations/fork-eclipse/&#34;&gt;https://www.zxiiro.ca/presentations/fork-eclipse/&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>https://www.zxiiro.ca/presentations/fork-eclipse/</description>
     </item>
     
     <item>
       <title>Eclipse CBI</title>
       <link>https://www.zxiiro.ca/publication/eclipse-cbi/</link>
       <pubDate>Thu, 01 Aug 2013 00:00:00 -0400</pubDate>
+      
       <guid>https://www.zxiiro.ca/publication/eclipse-cbi/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php&#34;&gt;https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php&lt;/a&gt;&lt;/p&gt;
-</description>
+      <description>https://www.eclipse.org/community/eclipse_newsletter/2013/august/article3.php</description>
     </item>
     
   </channel>
