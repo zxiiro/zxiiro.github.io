@@ -15,22 +15,22 @@ subtitle = ""
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
 
 [[feature]]
-  icon = "linux"
-  icon_pack = "fab"
-  name = "Linux"
-  description = ""
+  icon = "cogs"
+  icon_pack = "fas"
+  name = "DevOps"
+  description = "Build & Release automation"
 
 [[feature]]
-  icon = "python"
-  icon_pack = "fab"
-  name = "Python"
-  description = ""
+  icon = "code"
+  icon_pack = "fas"
+  name = "Software Development"
+  description = "Linux, Git, Python"
 
 [[feature]]
-  icon = "git"
-  icon_pack = "fab"
-  name = "Git"
-  description = ""
+  icon = "file-alt"
+  icon_pack = "fas"
+  name = "Technical Writing"
+  description = "Sphinx, Hugo"
 
 # Uncomment to use emoji icons.
 # [[feature]]
