@@ -23,16 +23,6 @@ network performance between 2 computers. You can install this tool using your
 distro’s package manager.&lt;/p&gt;
 &lt;p&gt;There are 2 modes this tool runs in. Server and Client, you will need to run it
 in server mode on one end and client mode on the other end.&lt;/p&gt;
-&lt;script async src=&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;&lt;ins class=&#34;adsbygoogle&#34;
-style=&#34;display:block; text-align:center;&#34;
-data-ad-layout=&#34;in-article&#34;
-data-ad-format=&#34;fluid&#34;
-data-ad-client=&#34;ca-pub-8372191724800927&#34;
-data-ad-slot=&#34;2013710351&#34;&gt;&lt;/ins&gt;&lt;/p&gt;
-&lt;script&gt;
-     (adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
 &lt;p&gt;&lt;strong&gt;Server usage:&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;iperf -s
 &lt;/code&gt;&lt;/pre&gt;
@@ -64,16 +54,6 @@ on Windows, Steam for Linux installs to your &lt;code&gt;$HOME&lt;/code&gt; dire
 every user will have their own Steam installed and what’s more their own games
 installed. So on a shared system you might end up with the same games being
 installed multiple times.&lt;/p&gt;
-&lt;script async src=&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;&lt;ins class=&#34;adsbygoogle&#34;
-style=&#34;display:block; text-align:center;&#34;
-data-ad-layout=&#34;in-article&#34;
-data-ad-format=&#34;fluid&#34;
-data-ad-client=&#34;ca-pub-8372191724800927&#34;
-data-ad-slot=&#34;2013710351&#34;&gt;&lt;/ins&gt;&lt;/p&gt;
-&lt;script&gt;
-     (adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
 &lt;p&gt;Steam has a feature that allows you to install games to a alternate location
 called Steam Libraries. This feature allows you to create a Library at a new
 location such as an alternate harddrive or partition if you don’t like where

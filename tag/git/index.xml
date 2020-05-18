@@ -49,16 +49,6 @@ Co-authored-by: Firstname Lastname &amp;lt;email&amp;gt;
 Signed-off-by: Firstname Lastname &amp;lt;email&amp;gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;We will break down the major sections below.&lt;/p&gt;
-&lt;script async src=&#34;https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js&#34;&gt;&lt;/script&gt;
-&lt;p&gt;&lt;ins class=&#34;adsbygoogle&#34;
-style=&#34;display:block; text-align:center;&#34;
-data-ad-layout=&#34;in-article&#34;
-data-ad-format=&#34;fluid&#34;
-data-ad-client=&#34;ca-pub-8372191724800927&#34;
-data-ad-slot=&#34;2013710351&#34;&gt;&lt;/ins&gt;&lt;/p&gt;
-&lt;script&gt;
-     (adsbygoogle = window.adsbygoogle || []).push({});
-&lt;/script&gt;
 &lt;h2 id=&#34;the-subject-line&#34;&gt;The subject line&lt;/h2&gt;
 &lt;p&gt;The subject line should be short and sweet, providing enough detail for the
 reader to immediately have a decent idea about what the commit is about.&lt;/p&gt;
