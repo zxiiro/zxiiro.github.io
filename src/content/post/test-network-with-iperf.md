@@ -35,17 +35,6 @@ distro’s package manager.
 There are 2 modes this tool runs in. Server and Client, you will need to run it
 in server mode on one end and client mode on the other end.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8372191724800927"
-     data-ad-slot="2013710351"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 **Server usage:**
 
     iperf -s

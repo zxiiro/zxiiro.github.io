@@ -34,17 +34,6 @@ every user will have their own Steam installed and what’s more their own games
 installed. So on a shared system you might end up with the same games being
 installed multiple times.
 
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<ins class="adsbygoogle"
-     style="display:block; text-align:center;"
-     data-ad-layout="in-article"
-     data-ad-format="fluid"
-     data-ad-client="ca-pub-8372191724800927"
-     data-ad-slot="2013710351"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 Steam has a feature that allows you to install games to a alternate location
 called Steam Libraries. This feature allows you to create a Library at a new
 location such as an alternate harddrive or partition if you don’t like where
