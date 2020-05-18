@@ -13,7 +13,7 @@ subtitle = """
 </a>
 <a href="https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing"
    target="_blank">
-   <i class="far fa-file-alt"></i>
+   <i class="ai ai-cv"></i>
 </a>
 """
 
