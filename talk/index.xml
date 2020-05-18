@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Recent &amp; Upcoming Talks | zxiiro</title>
+    <title>Presentations | zxiiro</title>
     <link>https://www.zxiiro.ca/talk/</link>
       <atom:link href="https://www.zxiiro.ca/talk/index.xml" rel="self" type="application/rss+xml" />
-    <description>Recent &amp; Upcoming Talks</description>
+    <description>Presentations</description>
     <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright>
     <image>
       <url>https://www.zxiiro.ca/img/me</url>
-      <title>Recent &amp; Upcoming Talks</title>
+      <title>Presentations</title>
       <link>https://www.zxiiro.ca/talk/</link>
     </image>
     
