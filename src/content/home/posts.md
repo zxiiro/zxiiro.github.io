@@ -8,7 +8,14 @@ active = true  # Activate this widget? true/false
 weight = 60  # Order that this section will appear.
 
 title = "Posts"
-subtitle = ""
+subtitle = """
+<a href="/blog">
+  <i class="fas fa-blog"></i>
+</a>
+<a href="/tags">
+  <i class="fas fa-tags"></i>
+</a>
+"""
 
 [content]
   # Page type to display. E.g. post, talk, or publication.
