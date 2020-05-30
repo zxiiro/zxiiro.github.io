@@ -13,6 +13,71 @@
     </image>
     
     <item>
+      <title>Tracking Investments with You Need A Budget (YNAB)</title>
+      <link>https://www.zxiiro.ca/post/ynab-tracking-investments/</link>
+      <pubDate>Sat, 30 May 2020 18:08:21 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/post/ynab-tracking-investments/</guid>
+      <description>&lt;p&gt;While &lt;em&gt;You Need A Budget (YNAB)&lt;/em&gt; isn&amp;rsquo;t really designed to track investments it
+can be useful to include your investment assets to track your net worth.&lt;/p&gt;
+&lt;p&gt;The way I like to do this is by creating &lt;em&gt;Tracking&lt;/em&gt; accounts for each of my
+investment accounts and then reconciling the account balance once a month to
+update the investment balance.&lt;/p&gt;
+&lt;p&gt;To create a Tracking account:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Click &lt;strong&gt;Add Account&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Choose &lt;strong&gt;Unlinked&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set account type to &lt;strong&gt;Tracking &amp;gt; Asset&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Give the account a name&lt;/li&gt;
+&lt;li&gt;Set balance to current balance of total investment account&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-investment-tracking&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/img/ynab-track-asset.png&#34; data-caption=&#34;Investment Tracking&#34;&gt;
+
+
+  &lt;img src=&#34;https://www.zxiiro.ca/img/ynab-track-asset.png&#34; alt=&#34;&#34; width=&#34;300&#34; &gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption&gt;
+    Investment Tracking
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;Since the YNAB &lt;em&gt;Net Worth&lt;/em&gt; report only displays monthly balances I&amp;rsquo;ve found that
+the best time to reconcile is on the last day of each month. When reconciling
+simply set the balance to the current total balance of that account.&lt;/p&gt;
+&lt;p&gt;If you have multiple investment accounts such as TFSA, RRSP, Non-registered,
+etc&amp;hellip; then create a separate asset tracking accounts for each one of those
+accounts and reconcile them at the end of each month.&lt;/p&gt;
+&lt;p&gt;If you have a house asset that you&amp;rsquo;d like to track you can add it in the same
+way and periodically update the market value of your house.&lt;/p&gt;
+&lt;p&gt;While this method isn&amp;rsquo;t 100% accurate it gives you a good eyeball range and
+makes your &lt;em&gt;Net Worth&lt;/em&gt; report a little more useful.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Writing a Great Commit Message</title>
       <link>https://www.zxiiro.ca/post/writing-a-great-commit-message/</link>
       <pubDate>Fri, 15 May 2020 12:27:36 -0400</pubDate>
