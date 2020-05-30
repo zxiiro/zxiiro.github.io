@@ -295,6 +295,456 @@ understand the hardships of a code reviewer if you are one yourself.&lt;/p&gt;
     </item>
     
     <item>
+      <title>Contributing to Eclipse Projects via Gerrit</title>
+      <link>https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/</link>
+      <pubDate>Mon, 24 Aug 2015 04:03:57 -0400</pubDate>
+      <guid>https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/</guid>
+      <description>&lt;p&gt;Gerrit is a Web based code review system that is available to projects at
+Eclipse. The service is located at &lt;a href=&#34;https://git.eclipse.org/r/&#34;&gt;https://git.eclipse.org/r/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;creating-and-configuring-your-gerrit-account&#34;&gt;Creating and configuring your Gerrit account&lt;/h2&gt;
+&lt;p&gt;Eclipse&amp;rsquo;s Gerrit instance does not know your account exists until you login for
+the first time. So if you haven&amp;rsquo;t done so already navigate to
+&lt;a href=&#34;https://git.eclipse.org/r/&#34;&gt;https://git.eclipse.org/r/&lt;/a&gt; and login using your eclipse.org credentials to
+initialize your Gerrit account.&lt;/p&gt;
+&lt;p&gt;To checkout repositories, Gerrit does not let you use the same password as
+your eclipse.org account password. Instead if you are using SSH authentication
+Gerrit requires you provide it with your SSH public key. If you are using HTTP
+authentication then Gerrit will generate a random password for you.&lt;/p&gt;
+&lt;h3 id=&#34;accessing-gerrit-repos-with-ssh&#34;&gt;Accessing Gerrit repos with SSH&lt;/h3&gt;
+&lt;p&gt;SSH key based authentication is a bit more secure and easier as you do not need
+to save your password on your system. GitHub has a pretty decent documentation
+on how to Generate SSH key pair if you are interested in trying this method
+&lt;a href=&#34;https://help.github.com/articles/generating-ssh-keys&#34;&gt;https://help.github.com/articles/generating-ssh-keys&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Once you have hour SSH keys prepared you can upload the public key:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Login to Gerrit&lt;/li&gt;
+&lt;li&gt;Click your name at the top right&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Settings &amp;gt; SSH Public Keys&lt;/strong&gt; (&lt;a href=&#34;https://git.eclipse.org/r/#/settings/ssh-keys&#34;&gt;https://git.eclipse.org/r/#/settings/ssh-keys&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Add Key &amp;hellip;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Paste the text of your public key into the text box&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Add&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Your key may look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEELNeLbxkyFI3JfIC7sutF2NLJwizVDDljw6h2KB9dwUrVGUBQM7r9+4Ndp/ojJ+lEk8OuNh+Kicc0hwHLHz+v81ejN62yQe+c16fvard6MdkrA3xr1WuvNZDvBQhVUkNmEoYYa3C+GpvEmQssvrPhpU0RD6AELzBnrG+VME9Vb2ObvIHKj8OulxD96zk2GTRHM0KaR9XhLPsLQ7U0ML715BDA3k1Zf66DOmZiyzckZZD+YtiV3qnAfwW5hU9Xi+M92vqf5Z5mC7t6aX9Pu5TXb614NE1GKUZ6yDEWFLspo4ihl+X2pA2oMONjbgOG5gqlnBAArsG0WP6dVF+jKQ5 your_email@example.com
+&lt;/code&gt;&lt;/pre&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    The last part where it says &lt;code&gt;your_email@example.com&lt;/code&gt; is actually just a comment
+and can be anything you want here. Typically I put my email address or some
+word to identify who’s key this is or where it came from in case you have
+multiple keys.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;generate-http-password&#34;&gt;Generate HTTP password&lt;/h3&gt;
+&lt;p&gt;If using SSH key based authentication is not possible for you, or you would
+rather use a password. You will need to tell Gerrit to generate a random
+password for you before you can use password authentication.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Login to Gerrit&lt;/li&gt;
+&lt;li&gt;Click your name at the top right&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Settings &amp;gt; HTTP Password&lt;/strong&gt; (&lt;a href=&#34;https://git.eclipse.org/r/#/settings/http-password&#34;&gt;https://git.eclipse.org/r/#/settings/http-password&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Generate&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-generate-http-password&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-http-password_huab8a831c2f12fb7e99865d611413b6b1_10985_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Generate HTTP Password&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-http-password_huab8a831c2f12fb7e99865d611413b6b1_10985_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;249&#34; height=&#34;203&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Generate HTTP Password
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;p&gt;This random password will be the password you use to work with Git via Gerrit
+URLs. If you are ever worried that your password is compromised simply clear
+your password and re-generate a new one.&lt;/p&gt;
+&lt;h2 id=&#34;understanding-eclipse-git-and-gerrit-urls&#34;&gt;Understanding Eclipse Git and Gerrit URLs&lt;/h2&gt;
+&lt;p&gt;At Eclipse there is 3 types of URLs supported &lt;code&gt;git://&lt;/code&gt;, &lt;code&gt;ssh://&lt;/code&gt;, and
+&lt;code&gt;https://&lt;/code&gt;. You can find the project Git URLs via cGit at
+&lt;a href=&#34;https://git.eclipse.org/c/&#34;&gt;https://git.eclipse.org/c/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For Git the URLs are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git://git.eclipse.org/gitroot/project/repo.git&lt;/li&gt;
+&lt;li&gt;ssh://git.eclipse.org/gitroot/project/repo.git&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://git.eclipse.org/gitroot/project/repo.git&#34;&gt;http://git.eclipse.org/gitroot/project/repo.git&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can find the Gerrit URLs via Gerrit at &lt;a href=&#34;https://git.eclipse.org/r/&#34;&gt;https://git.eclipse.org/r/&lt;/a&gt; and
+should look something like these:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;git://git.eclipse.org/gitroot/project/repo&lt;/li&gt;
+&lt;li&gt;ssh://git.eclipse.org:29418/project/repo&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://git.eclipse.org/r/project/repo&#34;&gt;https://git.eclipse.org/r/project/repo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;git-url&#34;&gt;git:// url&lt;/h3&gt;
+&lt;p&gt;This URL is a read-only URL via the &lt;code&gt;git://&lt;/code&gt; protocol. This URL is in the form
+&lt;code&gt;git://git.eclipse.org/gitroot/project/repo.git&lt;/code&gt; and is the same no matter if
+you copied it from cGit or Gerrit.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;project&lt;/strong&gt; is a directory containing all the repos for a specific project.
+For example the CBI project is under /gitroot/cbi/repo.git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;repo.git&lt;/strong&gt; is the specific git repository for a project, some projects may
+have more than 1 repo&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    The final “.git” part of the URL is optional so may be omitted.
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;ssh-url&#34;&gt;ssh:// url&lt;/h3&gt;
+&lt;p&gt;The ssh:// protocol URLs are slightly different depending on if you are pulling
+from Git or Gerrit. If your project is Gerrit enabled you should prefer the
+Gerrit URL otherwise you won’t be able to push to the repository.&lt;/p&gt;
+&lt;p&gt;The reason the URLs are different is because Gerrit provides it’s own SSH
+service on port 29418 and does not use the same SSH service that is on the
+default port on git.eclipse.org.&lt;/p&gt;
+&lt;p&gt;Gerrit trims the “/gitroot” portion of the URL and adds a port “:29418” in it’s
+place.&lt;/p&gt;
+&lt;h3 id=&#34;http-url&#34;&gt;http:// url&lt;/h3&gt;
+&lt;p&gt;Again the URLs are slightly different depending on if you are using Git or
+Gerrit. If your project is Gerrit enabled you should prefer the Gerrit URL
+otherwise you won’t be able to push to the repository.&lt;/p&gt;
+&lt;p&gt;The reason the URL pattern is different here is because Gerrit hosts it’s own
+HTTP service for Git. The difference here is Gerrit only supports https
+(secure) and again Gerrit trims the “/gitroot” part of the URL and replaces it
+with “/r” which is the Gerrit web URL.&lt;/p&gt;
+&lt;h2 id=&#34;updating-a-existing-git-repo-to-use-gerrit-url&#34;&gt;Updating a existing Git repo to use Gerrit URL&lt;/h2&gt;
+&lt;p&gt;If you have already cloned a Git project at Eclipse you do not need to reclone,
+simply update your Git URLs to point to the new Gerrit URLs and you can start
+using Gerrit.&lt;/p&gt;
+&lt;h3 id=&#34;using-git-cli&#34;&gt;Using Git CLI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git remote set-url origin &amp;lt;gerrit-url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-egit&#34;&gt;Using EGit&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Git perspective (Window &amp;gt; Open Perspective &amp;gt; Other &amp;gt; Git)&lt;/li&gt;
+&lt;li&gt;Right click on the repo you wish to modify&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Properties&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Under Configuration tab, look for remote &amp;gt; origin &amp;gt; url&lt;/li&gt;
+&lt;li&gt;Enter the new URL&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Apply&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Ok&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-egit-remote-url&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-url_hu839838ffc56ab6b2a90c07abea441807_7261_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;EGit Remote URL&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-url_hu839838ffc56ab6b2a90c07abea441807_7261_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;559&#34; height=&#34;88&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    EGit Remote URL
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;checkout-a-gerrit-project&#34;&gt;Checkout a Gerrit Project&lt;/h2&gt;
+&lt;p&gt;If you have not already checked out the repository you want to work on then you
+can clone the repo directly.&lt;/p&gt;
+&lt;h3 id=&#34;using-git-cli-1&#34;&gt;Using Git CLI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git clone &amp;lt;gerrit-url&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-egit-1&#34;&gt;Using EGit&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Git perspective (Window &amp;gt; Open Perspective &amp;gt; Other &amp;gt; Git)&lt;/li&gt;
+&lt;li&gt;Click the Clone Repository button in the Git Repository view&lt;/li&gt;
+&lt;li&gt;Enter the Gerrit URL into the URI link&lt;/li&gt;
+&lt;li&gt;Enter your credentials if applicable (If you are using SSH you’ll have to configure your public/private keys)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;push-to-gerrit&#34;&gt;Push to Gerrit&lt;/h2&gt;
+&lt;p&gt;Pushing to Gerrit is no different than pushing to a regular Git repo. The only
+difference is you are pointing to a new URL so make sure your URL is configured
+currently. Simply push as you would with any other repository and your changes
+will go directly into the repo.&lt;/p&gt;
+&lt;p&gt;I like to be as specific as possible so I always push a branch specifically.&lt;/p&gt;
+&lt;h3 id=&#34;using-git-cli-2&#34;&gt;Using Git CLI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git push origin master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change master to the name of the branch you want to push to.&lt;/p&gt;
+&lt;h3 id=&#34;using-egit-2&#34;&gt;Using EGit&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Git perspective (Window &amp;gt; Open Perspective &amp;gt; Other &amp;gt; Git)&lt;/li&gt;
+&lt;li&gt;Right click on the repo you are making changes to&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Push branch&amp;hellip;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Ensure branch is master (or whatever branch you’re pushing)&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Next&lt;/strong&gt; (Note this will immediately push your branch!)&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-egit-push&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-push_hu22769935e82b6f2ef7e8492896880bff_21273_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;EGit Push&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-push_hu22769935e82b6f2ef7e8492896880bff_21273_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;696&#34; height=&#34;351&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    EGit Push
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h2 id=&#34;push-to-gerrit-for-review&#34;&gt;Push to Gerrit for Review&lt;/h2&gt;
+&lt;p&gt;Pushing for Review is a feature of Gerrit which allows you to push a patch
+online for developers to review. This is the method you should use to push if
+you are not a committer on the project or if you’d like a second opinion on
+your patch before it goes live.&lt;/p&gt;
+&lt;p&gt;Gerrit provides a special refspec to push your changes to which will instead of
+merging into the upstream repository commits it to be reviewed. This refspec is
+&lt;code&gt;refs/for/*&lt;/code&gt; if where the * tells Gerrit which branch you want your patch to be
+reviewed against. For example if you’d like to push your patch to be reviewed
+against the &lt;code&gt;master&lt;/code&gt; branch then you push to &lt;code&gt;refs/for/master&lt;/code&gt;. Change master to
+be any other existing branch online for it to be reviewed against another
+branch.&lt;/p&gt;
+&lt;p&gt;In the example below we are pushing a special Git keyword called &lt;code&gt;HEAD&lt;/code&gt;. In this
+case this simply means the latest commit on the current branch you are on.&lt;/p&gt;
+&lt;h3 id=&#34;using-git-cli-3&#34;&gt;Using Git CLI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git push origin HEAD:refs/for/master
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Change master to whichever branch you want to push to.&lt;/p&gt;
+&lt;h3 id=&#34;using-egit-3&#34;&gt;Using EGit&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Git perspective (Window &amp;gt; Open Perspective &amp;gt; Other &amp;gt; Git)&lt;/li&gt;
+&lt;li&gt;Right click on the repo you are making changes to&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Remote &amp;gt; Push&amp;hellip;&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Select &lt;strong&gt;Configure Remote Repository&lt;/strong&gt; and choose &lt;code&gt;origin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Next&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;Source ref&lt;/strong&gt; to &lt;code&gt;HEAD&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Set &lt;strong&gt;Destination ref&lt;/strong&gt; to &lt;code&gt;refs/for/master&lt;/code&gt; (Change master to the branch you want the patch to be reviewed against)&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Add Spec&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Click &lt;strong&gt;Finish&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-egit-refspec&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-refspec_hu6f78e05a67c1fbe1d54407163cd6f97c_6732_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;EGit Refspec&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-refspec_hu6f78e05a67c1fbe1d54407163cd6f97c_6732_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;585&#34; height=&#34;72&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    EGit Refspec
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;div class=&#34;alert alert-note&#34;&gt;
+  &lt;div&gt;
+    After you push, Gerrit will provide you with a link to your review. Note this
+down as it will be the link to your patch should you need it. If you are
+working on a Bug it is good practice to link to this URL in the Bug. The URL
+should look similar to this &lt;a href=&#34;https://git.eclipse.org/r/24873/&#34;&gt;https://git.eclipse.org/r/24873/&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;updating-a-patch-for-review&#34;&gt;Updating a patch for Review&lt;/h2&gt;
+&lt;p&gt;When your code is reviewed you might have some feedback asking you to address
+some issues with your code. In this case you will need to update your patch
+with a new version that addresses feedback comments.&lt;/p&gt;
+&lt;p&gt;The Gerrit way to update patches is to amend your existing patch commit
+continuously until it is accepted. When you amend your patch though you need to
+ensure that your commit message contains the correct &lt;code&gt;Change-Id&lt;/code&gt; field. This
+field is how Gerrit knows that you are updating an existing Gerrit review. This
+is a unique string that helps Gerrit identify an existing Review and update it.
+You can find the &lt;code&gt;Change-Id&lt;/code&gt; on the review page for your patch near the top you
+should see a box similar to this:&lt;/p&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-gerrit-change-id&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-change-id_hu1f92e0cb414e591469984358cb7f7ea4_15256_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;Gerrit Change-Id&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-change-id_hu1f92e0cb414e591469984358cb7f7ea4_15256_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;314&#34; height=&#34;169&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    Gerrit Change-Id
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;using-git-cli-4&#34;&gt;Using Git CLI&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;git add &amp;lt;files&amp;gt;
+git commit --amend
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&#34;using-egit-4&#34;&gt;Using EGit&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Navigate to the Git perspective (Window &amp;gt; Open Perspective &amp;gt; Other &amp;gt; Git)&lt;/li&gt;
+&lt;li&gt;Right click on the repo you are making changes to&lt;/li&gt;
+&lt;li&gt;Click Commit…&lt;/li&gt;
+&lt;li&gt;Select the files you modified&lt;/li&gt;
+&lt;li&gt;Check the Amend Previous Commit button&lt;/li&gt;
+&lt;/ol&gt;
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure id=&#34;figure-egit-amend&#34;&gt;
+
+
+  &lt;a data-fancybox=&#34;&#34; href=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-amend_hu9324df1d621f954b6ee67b5972860cba_3404_2000x2000_fit_lanczos_2.png&#34; data-caption=&#34;EGit Amend&#34;&gt;
+
+
+  &lt;img data-src=&#34;https://www.zxiiro.ca/post/contribute-to-eclipse-via-gerrit/gerrit-egit-amend_hu9324df1d621f954b6ee67b5972860cba_3404_2000x2000_fit_lanczos_2.png&#34; class=&#34;lazyload&#34; alt=&#34;&#34; width=&#34;620&#34; height=&#34;35&#34;&gt;
+&lt;/a&gt;
+
+
+  
+  
+  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+    EGit Amend
+  &lt;/figcaption&gt;
+
+
+&lt;/figure&gt;
+
+&lt;h3 id=&#34;amended-commit-message&#34;&gt;Amended Commit message&lt;/h3&gt;
+&lt;p&gt;Your amended commit message should look similar to the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Bug 420891 - [CBI] Builds too many projects
+
+According discussions in Bug 420891 it seems CBI build is building too
+many projects in JSDT. This patch removes the development directory from
+the build list which does not need to be built.
+
+Change-Id: I5bc9dfe47569e854b40d4fe9a400bb1dd16781d6
+Signed-off-by: Thanh Ha &amp;lt;thanh.ha@eclipse.org&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once amended you can push using the same method as in the previous section
+&lt;strong&gt;Push to Gerrit for Review&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Testing network performance with iperf</title>
       <link>https://www.zxiiro.ca/post/test-network-with-iperf/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate>
