@@ -5,9 +5,9 @@
     <link>https://www.zxiiro.ca/tag/eclipse/</link>
       <atom:link href="https://www.zxiiro.ca/tag/eclipse/index.xml" rel="self" type="application/rss+xml" />
     <description>Eclipse</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Mon, 24 Aug 2015 04:03:57 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright © 2021 Thanh Ha</copyright><lastBuildDate>Mon, 24 Aug 2015 04:03:57 -0400</lastBuildDate>
     <image>
-      <url>https://www.zxiiro.ca/img/me</url>
+      <url>https://www.zxiiro.ca/media/me</url>
       <title>Eclipse</title>
       <link>https://www.zxiiro.ca/tag/eclipse/</link>
     </image>
@@ -68,6 +68,11 @@ password for you before you can use password authentication.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -93,7 +98,7 @@ password for you before you can use password authentication.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     Generate HTTP Password
   &lt;/figcaption&gt;
 
@@ -174,6 +179,11 @@ using Gerrit.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -199,7 +209,7 @@ using Gerrit.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Remote URL
   &lt;/figcaption&gt;
 
@@ -242,6 +252,11 @@ will go directly into the repo.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -267,7 +282,7 @@ will go directly into the repo.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Push
   &lt;/figcaption&gt;
 
@@ -309,6 +324,11 @@ case this simply means the latest commit on the current branch you are on.&lt;/p
 
 
 
+
+  
+
+
+
   
   
 
@@ -334,7 +354,7 @@ case this simply means the latest commit on the current branch you are on.&lt;/p
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Refspec
   &lt;/figcaption&gt;
 
@@ -365,6 +385,11 @@ should see a box similar to this:&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -390,7 +415,7 @@ should see a box similar to this:&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     Gerrit Change-Id
   &lt;/figcaption&gt;
 
@@ -411,6 +436,11 @@ git commit --amend
 &lt;/ol&gt;
 
 
+
+
+
+
+  
 
 
 
@@ -439,7 +469,7 @@ git commit --amend
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Amend
   &lt;/figcaption&gt;
 

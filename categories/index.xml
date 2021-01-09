@@ -5,9 +5,9 @@
     <link>https://www.zxiiro.ca/categories/</link>
       <atom:link href="https://www.zxiiro.ca/categories/index.xml" rel="self" type="application/rss+xml" />
     <description>Categories</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright © 2021 Thanh Ha</copyright>
     <image>
-      <url>https://www.zxiiro.ca/img/me</url>
+      <url>https://www.zxiiro.ca/media/me</url>
       <title>Categories</title>
       <link>https://www.zxiiro.ca/categories/</link>
     </image>

@@ -5,9 +5,9 @@
     <link>https://www.zxiiro.ca/tag/linux/</link>
       <atom:link href="https://www.zxiiro.ca/tag/linux/index.xml" rel="self" type="application/rss+xml" />
     <description>Linux</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright><lastBuildDate>Tue, 29 Oct 2013 00:00:00 -0400</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright © 2021 Thanh Ha</copyright><lastBuildDate>Tue, 29 Oct 2013 00:00:00 -0400</lastBuildDate>
     <image>
-      <url>https://www.zxiiro.ca/img/me</url>
+      <url>https://www.zxiiro.ca/media/me</url>
       <title>Linux</title>
       <link>https://www.zxiiro.ca/tag/linux/</link>
     </image>
@@ -17,8 +17,7 @@
       <link>https://www.zxiiro.ca/post/test-network-with-iperf/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate>
       <guid>https://www.zxiiro.ca/post/test-network-with-iperf/</guid>
-      <description>&lt;p&gt;
-&lt;a href=&#34;https://code.google.com/archive/p/iperf/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iperf&lt;/a&gt; is a handy tool to check
+      <description>&lt;p&gt;&lt;a href=&#34;https://code.google.com/archive/p/iperf/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iperf&lt;/a&gt; is a handy tool to check
 network performance between 2 computers. You can install this tool using your
 distro’s package manager.&lt;/p&gt;
 &lt;p&gt;There are 2 modes this tool runs in. Server and Client, you will need to run it

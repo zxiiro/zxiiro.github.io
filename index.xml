@@ -5,9 +5,9 @@
     <link>https://www.zxiiro.ca/</link>
       <atom:link href="https://www.zxiiro.ca/index.xml" rel="self" type="application/rss+xml" />
     <description>zxiiro</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright © 2021 Thanh Ha</copyright><lastBuildDate>Sat, 30 May 2020 18:08:21 -0400</lastBuildDate>
     <image>
-      <url>https://www.zxiiro.ca/img/me</url>
+      <url>https://www.zxiiro.ca/media/me</url>
       <title>zxiiro</title>
       <link>https://www.zxiiro.ca/</link>
     </image>
@@ -30,6 +30,9 @@ update the investment balance.&lt;/p&gt;
 &lt;li&gt;Give the account a name&lt;/li&gt;
 &lt;li&gt;Set balance to current balance of total investment account&lt;/li&gt;
 &lt;/ol&gt;
+
+
+
 
 
 
@@ -350,6 +353,11 @@ password for you before you can use password authentication.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -375,7 +383,7 @@ password for you before you can use password authentication.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     Generate HTTP Password
   &lt;/figcaption&gt;
 
@@ -456,6 +464,11 @@ using Gerrit.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -481,7 +494,7 @@ using Gerrit.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Remote URL
   &lt;/figcaption&gt;
 
@@ -524,6 +537,11 @@ will go directly into the repo.&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -549,7 +567,7 @@ will go directly into the repo.&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Push
   &lt;/figcaption&gt;
 
@@ -591,6 +609,11 @@ case this simply means the latest commit on the current branch you are on.&lt;/p
 
 
 
+
+  
+
+
+
   
   
 
@@ -616,7 +639,7 @@ case this simply means the latest commit on the current branch you are on.&lt;/p
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Refspec
   &lt;/figcaption&gt;
 
@@ -647,6 +670,11 @@ should see a box similar to this:&lt;/p&gt;
 
 
 
+
+  
+
+
+
   
   
 
@@ -672,7 +700,7 @@ should see a box similar to this:&lt;/p&gt;
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     Gerrit Change-Id
   &lt;/figcaption&gt;
 
@@ -693,6 +721,11 @@ git commit --amend
 &lt;/ol&gt;
 
 
+
+
+
+
+  
 
 
 
@@ -721,7 +754,7 @@ git commit --amend
 
   
   
-  &lt;figcaption data-pre=&#34;Figure &#34; data-post=&#34;:&#34; class=&#34;numbered&#34;&gt;
+  &lt;figcaption data-pre=&#34;Figure&amp;nbsp;&#34; data-post=&#34;:&amp;nbsp;&#34; class=&#34;numbered&#34;&gt;
     EGit Amend
   &lt;/figcaption&gt;
 
@@ -776,8 +809,7 @@ Signed-off-by: Thanh Ha &amp;lt;thanh.ha@eclipse.org&amp;gt;
       <link>https://www.zxiiro.ca/post/test-network-with-iperf/</link>
       <pubDate>Tue, 29 Oct 2013 00:00:00 -0400</pubDate>
       <guid>https://www.zxiiro.ca/post/test-network-with-iperf/</guid>
-      <description>&lt;p&gt;
-&lt;a href=&#34;https://code.google.com/archive/p/iperf/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iperf&lt;/a&gt; is a handy tool to check
+      <description>&lt;p&gt;&lt;a href=&#34;https://code.google.com/archive/p/iperf/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;iperf&lt;/a&gt; is a handy tool to check
 network performance between 2 computers. You can install this tool using your
 distro’s package manager.&lt;/p&gt;
 &lt;p&gt;There are 2 modes this tool runs in. Server and Client, you will need to run it

@@ -5,9 +5,9 @@
     <link>https://www.zxiiro.ca/talk/</link>
       <atom:link href="https://www.zxiiro.ca/talk/index.xml" rel="self" type="application/rss+xml" />
     <description>Presentations</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>Copyright © 2020 Thanh Ha</copyright>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>Copyright © 2021 Thanh Ha</copyright>
     <image>
-      <url>https://www.zxiiro.ca/img/me</url>
+      <url>https://www.zxiiro.ca/media/me</url>
       <title>Presentations</title>
       <link>https://www.zxiiro.ca/talk/</link>
     </image>
