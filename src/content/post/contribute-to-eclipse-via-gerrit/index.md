@@ -71,12 +71,12 @@ Your key may look something like this:
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEELNeLbxkyFI3JfIC7sutF2NLJwizVDDljw6h2KB9dwUrVGUBQM7r9+4Ndp/ojJ+lEk8OuNh+Kicc0hwHLHz+v81ejN62yQe+c16fvard6MdkrA3xr1WuvNZDvBQhVUkNmEoYYa3C+GpvEmQssvrPhpU0RD6AELzBnrG+VME9Vb2ObvIHKj8OulxD96zk2GTRHM0KaR9XhLPsLQ7U0ML715BDA3k1Zf66DOmZiyzckZZD+YtiV3qnAfwW5hU9Xi+M92vqf5Z5mC7t6aX9Pu5TXb614NE1GKUZ6yDEWFLspo4ihl+X2pA2oMONjbgOG5gqlnBAArsG0WP6dVF+jKQ5 your_email@example.com
 ```
 
-{{% alert note %}}
+{{% callout note %}}
 The last part where it says `your_email@example.com` is actually just a comment
 and can be anything you want here. Typically I put my email address or some
 word to identify who’s key this is or where it came from in case you have
 multiple keys.
-{{% /alert %}}
+{{% /callout %}}
 
 ### Generate HTTP password
 
@@ -126,9 +126,9 @@ you copied it from cGit or Gerrit.
 * **repo.git** is the specific git repository for a project, some projects may
   have more than 1 repo
 
-{{% alert note %}}
+{{% callout note %}}
 The final “.git” part of the URL is optional so may be omitted.
-{{% /alert %}}
+{{% /callout %}}
 
 ### ssh:// url
 
@@ -257,12 +257,12 @@ Change master to whichever branch you want to push to.
 
 {{< figure src="gerrit-egit-refspec.png" title="EGit Refspec" numbered="true" lightbox="true" >}}
 
-{{% alert note %}}
+{{% callout note %}}
 After you push, Gerrit will provide you with a link to your review. Note this
 down as it will be the link to your patch should you need it. If you are
 working on a Bug it is good practice to link to this URL in the Bug. The URL
 should look similar to this https://git.eclipse.org/r/24873/
-{{% /alert %}}
+{{% /callout %}}
 
 ## Updating a patch for Review
 
