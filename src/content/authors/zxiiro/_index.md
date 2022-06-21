@@ -51,7 +51,7 @@ social:
   link: https://github.com/zxiiro
 - icon: linkedin
   icon_pack: fab
-  link: 'https://www.linkedin.com/in/thanhha/'
+  link: 'https://www.linkedin.com/in/zxiiro/'
 - icon: cv
   icon_pack: ai
   link: https://docs.google.com/document/d/13R5JxDdB-1fz4w_bhpA6BVraD-Sy4eExp6Cz2s5NrUM/edit?usp=sharing
